@@ -756,6 +756,8 @@ public class Camera2BasicFragment extends Fragment
         }
     }
 
+    //TODO: Tha camera resolution to work should be 640x480
+
     /**
      * Configures the necessary {@link android.graphics.Matrix} transformation to `mTextureView`.
      * This method should be called after the camera preview size is determined in
