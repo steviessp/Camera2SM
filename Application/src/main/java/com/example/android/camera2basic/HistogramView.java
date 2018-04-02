@@ -27,25 +27,21 @@ package com.example.android.camera2basic;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.hardware.Camera;
-import android.media.Image;
-import android.media.ImageReader;
 import android.os.Handler;
-import android.os.Message;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
-import java.nio.ByteBuffer;
 
 // HistogramView
 @SuppressWarnings("deprecation")
-public class HistogramView extends View
+public class HistogramView extends ImageView
         /*implements Camera.PreviewCallback*/ {
     static final private String TAG = "HistogramView";
 
@@ -53,7 +49,7 @@ public class HistogramView extends View
 
     private Paint paint;
     private Handler handler;
-    private Converter converter;
+//    private Converter converter;
     private Configuration config;
 
     private RectF rect;
@@ -72,7 +68,7 @@ public class HistogramView extends View
 
         paint = new Paint();
         //handler = new Handler(this);
-        converter = new Converter(context);
+//        converter = new Converter(context);
     }
 
     public HistogramView(Context context, AttributeSet attrs) {
@@ -80,7 +76,7 @@ public class HistogramView extends View
 
         paint = new Paint();
         //handler = new Handler(this);
-        converter = new Converter(context);
+//        converter = new Converter(context);
     }
 
     public HistogramView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -88,7 +84,7 @@ public class HistogramView extends View
 
         paint = new Paint();
         //handler = new Handler(this);
-        converter = new Converter(context);
+//        converter = new Converter(context);
     }
 
     public HistogramView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
@@ -96,7 +92,7 @@ public class HistogramView extends View
 
         paint = new Paint();
         //handler = new Handler(this);
-        converter = new Converter(getContext());
+//        thisconverter = new Converter(getContext());
     }
     // onSizeChanged
     @Override
@@ -111,56 +107,56 @@ public class HistogramView extends View
     @Override
     public void onDraw(Canvas canvas) {
 
-        if (histogram == null)
-            return;
-
-        if (config.orientation == Configuration.ORIENTATION_PORTRAIT)
-            canvas.drawColor(Color.BLACK);
-
-        paint.setStrokeWidth(width / (histogram.length * 3 / 4));
-
-        float xscale = (float) width / (histogram.length * 3 / 4);
-        float yscale = (float) height / this.max;
-
-        int i = 0, x = 0;
-        int max = 0;
-        for (int h : histogram) {
-            if ((i < 4) || (i > (histogram.length - 5))) {
-                i++;
-                if ((i % 4) > 3)
-                    x++;
-                continue;
-            }
-
-            if (max < h)
-                max = h;
-
-            float xpos = x * xscale;
-            float ypos = h * yscale;
-
-            switch (i % 4) {
-                case 0:
-                    paint.setColor(Color.RED);
-                    x++;
-                    break;
-
-                case 1:
-                    paint.setColor(Color.GREEN);
-                    x++;
-                    break;
-
-                case 2:
-                    paint.setColor(Color.BLUE);
-                    x++;
-                    break;
-            }
-
-            canvas.drawLine(xpos, height,
-                    xpos, height - ypos, paint);
-            i++;
-        }
-
-        this.max = max;
+//        if (histogram == null)
+//            return;
+//
+//        if (config.orientation == Configuration.ORIENTATION_PORTRAIT)
+//            canvas.drawColor(Color.BLACK);
+//
+//        paint.setStrokeWidth(width / (histogram.length * 3 / 4));
+//
+//        float xscale = (float) width / (histogram.length * 3 / 4);
+//        float yscale = (float) height / this.max;
+//
+//        int i = 0, x = 0;
+//        int max = 0;
+//        for (int h : histogram) {
+//            if ((i < 4) || (i > (histogram.length - 5))) {
+//                i++;
+//                if ((i % 4) > 3)
+//                    x++;
+//                continue;
+//            }
+//
+//            if (max < h)
+//                max = h;
+//
+//            float xpos = x * xscale;
+//            float ypos = h * yscale;
+//
+//            switch (i % 4) {
+//                case 0:
+//                    paint.setColor(Color.RED);
+//                    x++;
+//                    break;
+//
+//                case 1:
+//                    paint.setColor(Color.GREEN);
+//                    x++;
+//                    break;
+//
+//                case 2:
+//                    paint.setColor(Color.BLUE);
+//                    x++;
+//                    break;
+//            }
+//
+//            canvas.drawLine(xpos, height,
+//                    xpos, height - ypos, paint);
+//            i++;
+//        }
+//
+//        this.max = max;
     }
 
     /*
@@ -213,13 +209,13 @@ public class HistogramView extends View
 //        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
 //    }
 
-    void drawOnView(Bitmap bitmap, int w, int h){
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100  , stream);
-        byte[] byteArray = stream.toByteArray();
-        byte[] pixels = converter.convertToRGB(byteArray, w, h);
-
-        histogram = converter.histogram(pixels, w, h);
-        invalidate();
-    }
+//    void drawOnView(Bitmap bitmap, int w, int h){
+//        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100  , stream);
+//        byte[] byteArray = stream.toByteArray();
+//        byte[] pixels = converter.convertToRGB(byteArray, w, h);
+//
+//        histogram = converter.histogram(pixels, w, h);
+//        invalidate();
+//    }
 }

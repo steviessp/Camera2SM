@@ -18,7 +18,10 @@ package com.example.android.camera2basic;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ViewGroup;
+
+import org.opencv.android.OpenCVLoader;
 
 public class CameraActivity extends AppCompatActivity {
 
@@ -26,6 +29,13 @@ public class CameraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+
+
+        if (OpenCVLoader.initDebug()) {
+            Log.i("OPEN_CV", "OpenCV initialize success");
+        } else {
+            Log.i("OPEN_CV", "OpenCV initialize failed");
+        }
 
         if (null == savedInstanceState) {
             getSupportFragmentManager().beginTransaction()

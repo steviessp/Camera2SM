@@ -47,6 +47,8 @@ import android.media.ImageReader;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Looper;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
@@ -54,6 +56,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.util.Size;
+import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -64,6 +67,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+
+import org.opencv.android.Utils;
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfFloat;
+import org.opencv.core.MatOfInt;
+import org.opencv.core.MatOfRect;
+import org.opencv.core.Scalar;
+import org.opencv.imgproc.Imgproc;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -86,8 +103,7 @@ public class Camera2BasicFragment extends Fragment
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     private static final int REQUEST_CAMERA_PERMISSION = 1;
     private static final String FRAGMENT_DIALOG = "dialog";
-    private HistogramView histogram;
-
+    private ImageView histogramView;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -161,9 +177,26 @@ public class Camera2BasicFragment extends Fragment
         @Override
         public void onSurfaceTextureUpdated(SurfaceTexture texture) {
 //            setRGB();
-        }
+//            drawHistogram(mTextureView.getBitmap());
 
+        }
     };
+
+
+    void setRGB() {
+        Bitmap bitmap = mTextureView.getBitmap();
+//      Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
+        int x = (int) (mTextureView.getX() + mTextureView.getWidth() / 2);
+        int y = (int) (mTextureView.getY() + mTextureView.getHeight() / 2);
+        int pixel = bitmap.getPixel(x, y);
+        int redValue = Color.red(pixel);
+        int greenValue = Color.green(pixel);
+        int blueValue = Color.blue(pixel);
+        colorRedTextView.setText("Red:" + redValue);
+        colorGreenTextView.setText("Green:" + greenValue);
+        colorBlueTextView.setText("Blue:" + blueValue);
+        colorTextView.setBackgroundColor(Color.rgb(redValue, greenValue, blueValue));
+    }
 
     /**
      * ID of the current {@link CameraDevice}.
@@ -378,6 +411,7 @@ public class Camera2BasicFragment extends Fragment
     private TextView colorGreenTextView;
     private TextView colorBlueTextView;
     private TextView colorTextView;
+    private View view;
 
     /**
      * Given {@code choices} of {@code Size}s supported by a camera, choose the smallest one that
@@ -435,14 +469,15 @@ public class Camera2BasicFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+        view = inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+        return view;
 
     }
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
-        view.findViewById(R.id.picture).setOnClickListener(this);
-        view.findViewById(R.id.info).setOnClickListener(this);
+//        view.findViewById(R.id.picture).setOnClickListener(this);
+//        view.findViewById(R.id.info).setOnClickListener(this);
         view.findViewById(R.id.texture).setOnTouchListener(this);
 
         colorRedTextView = (TextView) view.findViewById(R.id.colorRed);
@@ -450,9 +485,7 @@ public class Camera2BasicFragment extends Fragment
         colorBlueTextView = (TextView) view.findViewById(R.id.colorBlue);
         colorTextView = (TextView) view.findViewById(R.id.color);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
-        histogram = (HistogramView) view.findViewById(R.id.histogram);
-//        ViewGroup parent = (ViewGroup) view.getParent();
-//        parent.addView(histogram);
+        histogramView = view.findViewById(R.id.histogram);
     }
 
     @Override
@@ -506,6 +539,7 @@ public class Camera2BasicFragment extends Fragment
     }
 
     StreamConfigurationMap map;
+
     /**
      * Sets up member variables related to camera.
      *
@@ -951,9 +985,9 @@ public class Camera2BasicFragment extends Fragment
 
         switch (motionEvent.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                Log.i("Camera2Basic", "onTouch: ACTION_DOWN");
                 //some code....
                 Bitmap bitmap = mTextureView.getBitmap();
-//                Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
                 x = (int) motionEvent.getX();
                 y = (int) motionEvent.getY();
                 int pixel = bitmap.getPixel(x, y);
@@ -965,32 +999,40 @@ public class Camera2BasicFragment extends Fragment
                 colorBlueTextView.setText("Blue:" + blueValue);
                 colorTextView.setBackgroundColor(Color.rgb(redValue, greenValue, blueValue));
 
-                histogram.drawOnView(bitmap, mPreviewSize.getWidth(), mPreviewSize.getHeight());
+//                histogram.drawOnView(bitmap, mPreviewSize.getWidth(), mPreviewSize.getHeight());
+//                drawHistogam(bitmap);
 
+//                histogramView.destroyDrawingCache();
+//                histogramView.setBackground(null);
+//                histogramView.setImageResource(android.R.color.transparent);
+                view.setOnTouchListener(null);
+
+                drawHistogram(bitmap);
+//                  stopBackgroundThread();;
+//                int orientation = getResources().getConfiguration().orientation;
+//                if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+//
+//                } else {
+//                    Matrix mtx = new Matrix();
+//                    mtx.postRotate(90);
+//                    Bitmap scaled = Bitmap.createScaledBitmap(bitmap, histogramView.getMeasuredWidth(), histogramView.getMeasuredHeight(), false);
+//                    bitmap.recycle();
+//                    drawHistogram(scaled);
+//                }
+
+//                Log.i( TAG, "TextureView  Width: "  + mTextureView.getWidth());
+//                Log.i( TAG, "TextureView Height: "  + mTextureView.getHeight());
                 break;
             case MotionEvent.ACTION_UP:
                 break;
             default:
                 break;
+
         }
 
         return true;
     }
 
-    void setRGB(){
-        Bitmap bitmap = mTextureView.getBitmap();
-//      Bitmap bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
-        int x = (int) (mTextureView.getX() + mTextureView.getWidth() / 2);
-        int y = (int) (mTextureView.getY() + mTextureView.getHeight() / 2);
-        int pixel = bitmap.getPixel(x, y);
-        int redValue = Color.red(pixel);
-        int greenValue = Color.green(pixel);
-        int blueValue = Color.blue(pixel);
-        colorRedTextView.setText("Red:" + redValue);
-        colorGreenTextView.setText("Green:" + greenValue);
-        colorBlueTextView.setText("Blue:" + blueValue);
-        colorTextView.setBackgroundColor(Color.rgb(redValue, greenValue, blueValue));
-    }
 
     /**
      * Saves a JPEG {@link Image} into the specified {@link File}.
@@ -1111,6 +1153,87 @@ public class Camera2BasicFragment extends Fragment
                                 }
                             })
                     .create();
+        }
+    }
+
+    private void drawHistogram(Bitmap bitmap) {
+        try {
+            Mat rgba = new Mat();
+            Utils.bitmapToMat(bitmap, rgba);
+            bitmap.recycle();
+
+//            org.opencv.core.Size rgbaSize = rgba.size();
+            org.opencv.core.Size rgbaSize = new org.opencv.core.Size(histogramView.getMeasuredWidth(), histogramView.getMeasuredHeight());
+            int histSize = 256;
+            MatOfInt histogramSize = new MatOfInt(histSize);
+
+//            int histogramHeight = (int) rgbaSize.height;
+            int histogramHeight = histogramView.getHeight();
+//            int binWidth = 5;
+
+            int binWidth = Math.round(histogramView.getWidth() / histSize);
+            MatOfFloat histogramRange = new MatOfFloat(0f, 256f);
+
+
+            Scalar[] colorsRgb = new Scalar[]{new Scalar(200, 0, 0, 255), new Scalar(0, 200, 0, 255), new Scalar(0, 0, 200, 255)};
+            MatOfInt[] channels = new MatOfInt[]{new MatOfInt(0), new MatOfInt(1), new MatOfInt(2)};
+
+            Mat[] histograms = new Mat[]{new Mat(), new Mat(), new Mat()};
+            Mat histMatBitmap = new Mat(rgbaSize, rgba.type());
+//            Mat histMatBitmap = new Mat(new  org.opencv.core.Size(histogramView.getMeasuredWidth(), histogramView.getMeasuredHeight()), rgba.type());
+
+            for (int i = 0; i < channels.length; i++) {
+                Imgproc.calcHist(Collections.singletonList(rgba), channels[i], new Mat(), histograms[i], histogramSize, histogramRange);
+                Core.normalize(histograms[i], histograms[i], 0, histogramHeight, Core.NORM_MINMAX);  //NORM_INF);
+                for (int j = 0; j < histSize; j++) {
+                    org.opencv.core.Point p1 = new org.opencv.core.Point(binWidth * (j - 1), histogramHeight - Math.round(histograms[i].get(j - 1, 0)[0]));
+                    org.opencv.core.Point p2 = new org.opencv.core.Point(binWidth * j, histogramHeight - Math.round(histograms[i].get(j, 0)[0]));
+                    Imgproc.line(histMatBitmap, p1, p2, colorsRgb[i], 2, 8, 0);
+                }
+            }
+
+            Bitmap histBitmap = Bitmap.createBitmap(histMatBitmap.cols(), histMatBitmap.rows(), Bitmap.Config.ARGB_8888);
+            Utils.matToBitmap(histMatBitmap, histBitmap);
+
+
+            //histogramView.setImageResource(android.R.color.transparent);
+            //histogramView.setImageBitmap(null);
+            //histogramView.invalidate();
+
+
+
+            BitmapHelper.showBitmap(getContext(), histBitmap, histogramView);
+
+            rgba.release();
+            for (int g = 0; g < histograms.length; g++) {
+                histograms[g].release();
+            }
+
+            histMatBitmap.release();
+            histBitmap.recycle();
+
+            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                public void run() {
+                    // here put code
+                    view.setOnTouchListener(Camera2BasicFragment.this);
+                }
+            }, 1000 /*delay time in milliseconds*/);
+
+
+//            mTextureView.setClickable(true);
+
+//            mBackgroundThread.wait(5000);
+
+//            startBackgroundThread();
+//            histogramView.setImageResource(android.R.color.transparent);
+//            histogramView.setImageBitmap(null);
+//            histogramView.invalidate();
+//            histogramView.setImageBitmap(histBitmap);
+
+//            histBitmap.recycle();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
