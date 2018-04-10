@@ -25,13 +25,13 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
-import android.graphics.drawable.BitmapDrawable;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
 import android.hardware.camera2.CameraCharacteristics;
@@ -48,7 +48,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
@@ -56,7 +55,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.util.Size;
-import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -68,23 +66,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfFloat;
 import org.opencv.core.MatOfInt;
-import org.opencv.core.MatOfRect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -285,7 +275,22 @@ public class Camera2BasicFragment extends Fragment
 
         @Override
         public void onImageAvailable(ImageReader reader) {
-            mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
+
+            final Image image = reader.acquireLatestImage();
+            ByteBuffer buffer = image.getPlanes()[0].getBuffer();
+            byte[] bytes = new byte[buffer.capacity()];
+            buffer.get(bytes);
+            final Bitmap bitmapImage = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
+
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    drawHistogram(bitmapImage);
+                    image.close();
+                }
+            });
+
+//            mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
         }
 
     };
@@ -395,17 +400,17 @@ public class Camera2BasicFragment extends Fragment
      *
      * @param text The message to show
      */
-    private void showToast(final String text) {
-        final Activity activity = getActivity();
-        if (activity != null) {
-            activity.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(activity, text, Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    }
+//    private void showToast(final String text) {
+//        final Activity activity = getActivity();
+//        if (activity != null) {
+//            activity.runOnUiThread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    Toast.makeText(activity, text, Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//        }
+//    }
 
     private TextView colorRedTextView;
     private TextView colorGreenTextView;
@@ -478,7 +483,6 @@ public class Camera2BasicFragment extends Fragment
     public void onViewCreated(final View view, Bundle savedInstanceState) {
 //        view.findViewById(R.id.picture).setOnClickListener(this);
 //        view.findViewById(R.id.info).setOnClickListener(this);
-        view.findViewById(R.id.texture).setOnTouchListener(this);
 
         colorRedTextView = (TextView) view.findViewById(R.id.colorRed);
         colorGreenTextView = (TextView) view.findViewById(R.id.colorGreen);
@@ -486,6 +490,9 @@ public class Camera2BasicFragment extends Fragment
         colorTextView = (TextView) view.findViewById(R.id.color);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
         histogramView = view.findViewById(R.id.histogram);
+
+        mTextureView.setOnClickListener(this);
+        mTextureView.setOnTouchListener(this);
     }
 
     @Override
@@ -781,7 +788,7 @@ public class Camera2BasicFragment extends Fragment
                         @Override
                         public void onConfigureFailed(
                                 @NonNull CameraCaptureSession cameraCaptureSession) {
-                            showToast("Failed");
+                            //showToast("Failed");
                         }
                     }, null
             );
@@ -829,6 +836,8 @@ public class Camera2BasicFragment extends Fragment
      * Initiate a still image capture.
      */
     private void takePicture() {
+        histogramView.setImageResource(android.R.color.transparent);
+        histogramView.setImageBitmap(null);
         lockFocus();
     }
 
@@ -899,7 +908,7 @@ public class Camera2BasicFragment extends Fragment
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
-                    showToast("Saved: " + mFile);
+                    //showToast("Saved: " + mFile);
                     Log.d(TAG, mFile.toString());
                     unlockFocus();
                 }
@@ -951,10 +960,16 @@ public class Camera2BasicFragment extends Fragment
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.picture: {
+//            case R.id.picture:
+            case R.id.texture: {
                 takePicture();
+                mTextureView.setOnClickListener(null);
                 break;
             }
+//            case R.id.texture:
+//
+//                break;
+
             case R.id.info: {
                 Activity activity = getActivity();
                 if (null != activity) {
@@ -1005,9 +1020,9 @@ public class Camera2BasicFragment extends Fragment
 //                histogramView.destroyDrawingCache();
 //                histogramView.setBackground(null);
 //                histogramView.setImageResource(android.R.color.transparent);
-                view.setOnTouchListener(null);
+//                view.setOnTouchListener(null);
 
-                drawHistogram(bitmap);
+//                drawHistogram(bitmap);
 //                  stopBackgroundThread();;
 //                int orientation = getResources().getConfiguration().orientation;
 //                if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -1030,14 +1045,14 @@ public class Camera2BasicFragment extends Fragment
 
         }
 
-        return true;
+        return false;
     }
 
 
     /**
      * Saves a JPEG {@link Image} into the specified {@link File}.
      */
-    private static class ImageSaver implements Runnable {
+    private class ImageSaver implements Runnable {
 
         /**
          * The JPEG image
@@ -1055,25 +1070,26 @@ public class Camera2BasicFragment extends Fragment
 
         @Override
         public void run() {
-            ByteBuffer buffer = mImage.getPlanes()[0].getBuffer();
-            byte[] bytes = new byte[buffer.remaining()];
-            buffer.get(bytes);
-            FileOutputStream output = null;
-            try {
-                output = new FileOutputStream(mFile);
-                output.write(bytes);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                mImage.close();
-                if (null != output) {
-                    try {
-                        output.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
+
+//            ByteBuffer buffer = mImage.getPlanes()[0].getBuffer();
+//            byte[] bytes = new byte[buffer.remaining()];
+//            buffer.get(bytes);
+//            FileOutputStream output = null;
+//            try {
+//                output = new FileOutputStream(mFile);
+//                output.write(bytes);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            } finally {
+//                mImage.close();
+//                if (null != output) {
+//                    try {
+//                        output.close();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
         }
 
     }
@@ -1156,22 +1172,26 @@ public class Camera2BasicFragment extends Fragment
         }
     }
 
-    private void drawHistogram(Bitmap bitmap) {
+    public void drawHistogram(Bitmap bitmap) {
         try {
             Mat rgba = new Mat();
             Utils.bitmapToMat(bitmap, rgba);
             bitmap.recycle();
 
+            org.opencv.core.Size rgbaSize = new org.opencv.core.Size(histogramView.getMeasuredWidth() , histogramView.getMeasuredHeight());
+//            org.opencv.core.Size rgbaSize = new org.opencv.core.Size(bitmap.getWidth(), bitmap.getHeight());
 //            org.opencv.core.Size rgbaSize = rgba.size();
-            org.opencv.core.Size rgbaSize = new org.opencv.core.Size(histogramView.getMeasuredWidth(), histogramView.getMeasuredHeight());
+
+
             int histSize = 256;
             MatOfInt histogramSize = new MatOfInt(histSize);
 
+            int histogramHeight = histogramView.getMeasuredHeight();
 //            int histogramHeight = (int) rgbaSize.height;
-            int histogramHeight = histogramView.getHeight();
 //            int binWidth = 5;
 
-            int binWidth = Math.round(histogramView.getWidth() / histSize);
+            int binWidth = Math.round(histogramView.getMeasuredWidth() / histSize);
+//            int binWidth = Math.round(histogramSize.width() / histSize);
             MatOfFloat histogramRange = new MatOfFloat(0f, 256f);
 
 
@@ -1179,8 +1199,9 @@ public class Camera2BasicFragment extends Fragment
             MatOfInt[] channels = new MatOfInt[]{new MatOfInt(0), new MatOfInt(1), new MatOfInt(2)};
 
             Mat[] histograms = new Mat[]{new Mat(), new Mat(), new Mat()};
-            Mat histMatBitmap = new Mat(rgbaSize, rgba.type());
-//            Mat histMatBitmap = new Mat(new  org.opencv.core.Size(histogramView.getMeasuredWidth(), histogramView.getMeasuredHeight()), rgba.type());
+//            Mat histMatBitmap = new Mat(rgbaSize, rgba.type());
+            Mat histMatBitmap = new Mat(new  org.opencv.core.Size(histogramView.getMeasuredWidth(), histogramView.getMeasuredHeight()), rgba.type());
+//            Mat histMatBitmap = new Mat(new org.opencv.core.Size(200, 100), rgba.type());
 
             for (int i = 0; i < channels.length; i++) {
                 Imgproc.calcHist(Collections.singletonList(rgba), channels[i], new Mat(), histograms[i], histogramSize, histogramRange);
@@ -1201,7 +1222,6 @@ public class Camera2BasicFragment extends Fragment
             //histogramView.invalidate();
 
 
-
             BitmapHelper.showBitmap(getContext(), histBitmap, histogramView);
 
             rgba.release();
@@ -1211,13 +1231,13 @@ public class Camera2BasicFragment extends Fragment
 
             histMatBitmap.release();
             histBitmap.recycle();
-
+//
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 public void run() {
                     // here put code
-                    view.setOnTouchListener(Camera2BasicFragment.this);
+                    mTextureView.setOnClickListener(Camera2BasicFragment.this);
                 }
-            }, 1000 /*delay time in milliseconds*/);
+            }, 500 /*delay time in milliseconds*/);
 
 
 //            mTextureView.setClickable(true);

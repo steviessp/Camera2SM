@@ -4,7 +4,7 @@
             "outputFile": "/Users/admin/Documents/Android/Camera2SM/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/71e01a07714abe881d66e657b66923f2/res/values-land/values-land.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2384ce508cd208b8f3f2cbcb0e121c5e/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

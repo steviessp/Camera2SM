@@ -23,16 +23,15 @@
         android:id="@+id/texture"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:background="@color/cardview_dark_background"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/colorRed"
@@ -55,6 +54,16 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
+
+    <!--<Button-->
+        <!--android:id="@+id/picture"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:text="@string/histogram"-->
+        <!--android:alpha="0.5"/>-->
+
     <ImageView
         android:id="@+id/histogram"
         android:layout_width="match_parent"
@@ -65,6 +74,6 @@
         android:alpha="0.5"
         android:background="@color/cardview_dark_background"
         android:padding="@dimen/margin_small"
-        android:scaleType="fitXY" />
+        android:scaleType="fitCenter" />
 
 </RelativeLayout>
