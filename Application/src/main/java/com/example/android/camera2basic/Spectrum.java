@@ -76,6 +76,9 @@ public class Spectrum {
         return (int)dCCT;
     }
 
-
+    public double GetLuminance(int R, int G, int B){
+        luminance = ((0.2126 * R) + (0.7152 * G) + (0.0722 * B));
+        return luminance;
+    }
 
 }

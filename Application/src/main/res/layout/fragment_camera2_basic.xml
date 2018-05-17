@@ -14,55 +14,172 @@
  limitations under the License.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.example.android.camera2basic.AutoFitTextureView
-        android:id="@+id/texture"
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/histogram">
+
+        <com.example.android.camera2basic.AutoFitTextureView
+            android:id="@+id/texture"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.example.android.camera2basic.SightView
+            android:id="@+id/sightView"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_marginEnd="164dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="190dp"
+            android:background="@drawable/dotted"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/texture" />
+
+    </android.support.constraint.ConstraintLayout>
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="115dp"
+        android:id="@+id/RGB_data"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:background="@color/cardview_dark_background"
+        android:background="@drawable/button_border_white"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/colorRed"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
 
-        <TextView
-            android:id="@+id/colorGreen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/colorRedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textStyle="bold"
+                android:text="@string/red"/>
 
-        <TextView
-            android:id="@+id/colorBlue"
+            <TextView
+                android:id="@+id/colorRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"/>
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
+
+            <TextView
+                android:id="@+id/colorGreenLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textStyle="bold"
+                android:text="@string/green"/>
+
+            <TextView
+                android:id="@+id/colorGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
+
+            <TextView
+                android:id="@+id/colorBlueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textStyle="bold"
+                android:text="@string/blue"/>
+
+            <TextView
+                android:id="@+id/colorBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/color"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
+
+            <TextView
+                android:id="@+id/CCTLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/cct"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CCT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+        </FrameLayout>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/HSV_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_border_white"
+        android:orientation="vertical">
 
-    <!--<Button-->
-        <!--android:id="@+id/picture"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_gravity="right"-->
-        <!--android:text="@string/histogram"-->
-        <!--android:alpha="0.5"/>-->
+        <TextView
+            android:id="@+id/hue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border" />
+
+        <TextView
+            android:id="@+id/saturation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border" />
+
+        <TextView
+            android:id="@+id/lab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/histogram"
@@ -72,8 +189,9 @@
         android:layout_alignParentStart="true"
         android:layout_gravity="center_horizontal"
         android:alpha="0.5"
-        android:background="@color/cardview_dark_background"
+        android:background="@color/cardview_light_background"
         android:padding="@dimen/margin_small"
         android:scaleType="fitCenter" />
+
 
 </RelativeLayout>

@@ -4,7 +4,7 @@
             "outputFile": "/Users/admin/Documents/Android/Camera2SM/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/f485f8464d948ee6b31182f3be87d221/res/values-v24/values-v24.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/88af867b00addae27847e2db60a690b9/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2384ce508cd208b8f3f2cbcb0e121c5e/res/values-v24/values-v24.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7724913b5982ba13c3cb7e3c39b7f118/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

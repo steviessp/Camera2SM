@@ -42,7 +42,7 @@ public class CameraActivity extends AppCompatActivity {
                     .replace(R.id.container, Camera2BasicFragment.newInstance())
                     .commit();
         }
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
 }

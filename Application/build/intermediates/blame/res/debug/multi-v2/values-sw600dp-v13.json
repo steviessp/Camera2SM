@@ -23,6 +23,16 @@
                     }
                 },
                 {
+                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7724913b5982ba13c3cb7e3c39b7f118/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
                     "source": "/Users/admin/Documents/Android/Camera2SM/Application/src/main/res/values-sw600dp/template-dimens.xml",
                     "from": {
                         "startLines": "20,21",
@@ -37,16 +47,6 @@
                         "startOffsets": "611,679",
                         "endColumns": "67,67",
                         "endOffsets": "674,742"
-                    }
-                },
-                {
-                    "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2384ce508cd208b8f3f2cbcb0e121c5e/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
                     }
                 }
             ]
