@@ -20,7 +20,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -51,7 +50,6 @@
 
     </android.support.constraint.ConstraintLayout>
 
-
     <LinearLayout
         android:id="@+id/RGB_data"
         android:layout_width="100dp"
@@ -69,14 +67,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:textStyle="bold"
-                android:text="@string/red"/>
+                android:text="@string/red"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/colorRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"/>
+                android:layout_gravity="end" />
         </FrameLayout>
 
         <FrameLayout
@@ -89,8 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:textStyle="bold"
-                android:text="@string/green"/>
+                android:text="@string/green"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/colorGreen"
@@ -109,8 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:textStyle="bold"
-                android:text="@string/blue"/>
+                android:text="@string/blue"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/colorBlue"
@@ -155,42 +153,128 @@
         android:background="@drawable/button_border_white"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/hue"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_border" />
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
 
-        <TextView
-            android:id="@+id/saturation"
+            <TextView
+                android:id="@+id/hueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text = "@string/hue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginHorizontal="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_border" />
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
 
-        <TextView
-            android:id="@+id/value"
+            <TextView
+                android:id="@+id/saturationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/saturation"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saturation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginHorizontal="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_border" />
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
 
-        <TextView
-            android:id="@+id/lab"
+            <TextView
+                android:id="@+id/valueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/value"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginHorizontal="5dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_border" />
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border">
 
+            <TextView
+                android:id="@+id/LabLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/CIElab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CieLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginHorizontal="5dp"/>
+        </LinearLayout>
     </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/histogram"
+        android:background="@android:color/white"
+        />
+
+    <!--<com.jjoe64.graphview.GraphView-->
+        <!--android:id="@+id/graph"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:background="@color/cardview_light_background"-->
+        <!--android:padding="3dp"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:visibility="invisible"-->
+        <!--/>-->
 
     <ImageView
         android:id="@+id/histogram"
         android:layout_width="match_parent"
-        android:layout_height="215dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_gravity="center_horizontal"
-        android:alpha="0.5"
         android:background="@color/cardview_light_background"
-        android:padding="@dimen/margin_small"
+        android:padding="3dp"
         android:scaleType="fitCenter" />
 
 

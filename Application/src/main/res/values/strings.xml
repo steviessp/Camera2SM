@@ -20,11 +20,12 @@
     <string name="description_info">Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
-    <string name="blue">Blue:</string>
-    <string name="red">Red:</string>
-    <string name="green">Green:</string>
-    <string name="cct">CCT:</string>
-    <string name="hue">Hue:</string>
-    <string name="saturation">Saturation:</string>
-    <string name="value">Value:</string>
+    <string name="blue">Blue: </string>
+    <string name="red">Red: </string>
+    <string name="green">Green: </string>
+    <string name="cct">CCT: </string>
+    <string name="hue">Hue: </string>
+    <string name="saturation">Saturation: </string>
+    <string name="value">Value: </string>
+    <string name="CIElab">CIE Lab: </string>
 </resources>
