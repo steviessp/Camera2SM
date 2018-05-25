@@ -31,12 +31,6 @@ public class CameraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        if (OpenCVLoader.initDebug()) {
-            Log.i("OPEN_CV", "OpenCV initialize success");
-        } else {
-            Log.i("OPEN_CV", "OpenCV initialize failed");
-        }
-
         if (null == savedInstanceState) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, Camera2BasicFragment.newInstance())

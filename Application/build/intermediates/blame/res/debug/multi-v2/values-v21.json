@@ -14,12 +14,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,263,264,271,275,281,284",
+                        "startLines": "2,3,4,5,263,264,271,275,279,282",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,20505,20677",
-                        "endLines": "2,3,4,5,263,264,271,275,283,288",
+                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,20424,20596",
+                        "endLines": "2,3,4,5,263,264,271,275,281,286",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,20672,21010"
+                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,20591,20929"
                     }
                 },
                 {
@@ -58,25 +58,6 @@
                         "endLines": "267,270,274,278",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "19667,19830,20124,20419"
-                    }
-                },
-                {
-                    "source": "/Users/admin/Documents/Android/Camera2SM/Application/src/main/res/values-v21/base-template-styles.xml",
-                    "from": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "677",
-                        "endLines": "21",
-                        "endColumns": "12",
-                        "endOffsets": "753"
-                    },
-                    "to": {
-                        "startLines": "279",
-                        "startColumns": "4",
-                        "startOffsets": "20424",
-                        "endLines": "280",
-                        "endColumns": "12",
-                        "endOffsets": "20500"
                     }
                 }
             ]

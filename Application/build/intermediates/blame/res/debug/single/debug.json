@@ -88,10 +88,6 @@
         "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7724913b5982ba13c3cb7e3c39b7f118/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "/Users/admin/Documents/Android/Camera2SM/Application/build/intermediates/res/merged/debug/drawable-hdpi_tile.9.png.flat",
-        "source": "/Users/admin/Documents/Android/Camera2SM/Application/src/main/res/drawable-hdpi/tile.9.png"
-    },
-    {
         "merged": "/Users/admin/Documents/Android/Camera2SM/Application/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7724913b5982ba13c3cb7e3c39b7f118/res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png"
     },
