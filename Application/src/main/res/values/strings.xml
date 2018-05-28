@@ -26,4 +26,5 @@
     <string name="saturation">Saturation: </string>
     <string name="value">Value: </string>
     <string name="CIElab">CIE Lab: </string>
+    <string name="permdesc_flashlight">permdesc_flashlight</string>
 </resources>

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:16:1-48:12
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:16:1-46:12
 MERGED from [com.android.support:support-v13:27.1.1] /Users/admin/.gradle/caches/transforms-1/files-1.1/support-v13-27.1.1.aar/a0631b083bc1b9b6c2ebb4db4a01d5d3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:27.1.1] /Users/admin/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/5ec103a953f7fd82f808a68aa0f08e0b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/admin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7724913b5982ba13c3cb7e3c39b7f118/AndroidManifest.xml:17:1-22:12
@@ -32,51 +32,51 @@ ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/Android
 	android:name
 		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:20:22-78
 uses-feature#android.hardware.camera
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:22:5-60
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:21:5-60
 	android:name
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:22:19-57
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:21:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:23:5-70
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:22:5-70
 	android:name
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:23:19-67
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:22:19-67
 application
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:26:5-46:19
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:24:5-44:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/admin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/423d82dc3c8f8f1d1544ecdb5e6cea27/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/admin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/423d82dc3c8f8f1d1544ecdb5e6cea27/AndroidManifest.xml:9:5-20
 MERGED from [com.jjoe64:graphview:4.2.2] /Users/admin/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/a9f423424563112ecb03466f886414b7/AndroidManifest.xml:11:5-12:19
 MERGED from [com.jjoe64:graphview:4.2.2] /Users/admin/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/a9f423424563112ecb03466f886414b7/AndroidManifest.xml:11:5-12:19
 	android:label
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:29:9-41
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:27:9-41
 	android:icon
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:28:9-45
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:26:9-45
 	android:allowBackup
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:27:9-35
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:25:9-35
 	android:theme
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:30:9-45
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:28:9-45
 activity#com.example.android.camera2basic.SpectrumActivity
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:32:9-34:47
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:30:9-32:47
 	android:screenOrientation
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:33:13-49
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:31:13-49
 	android:name
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:34:13-45
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:32:13-45
 activity#com.example.android.camera2basic.CameraActivity
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:36:9-44:20
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:34:9-42:20
 	android:screenOrientation
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:39:13-49
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:37:13-49
 	android:label
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:38:13-45
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:36:13-45
 	android:name
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:37:13-43
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:35:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:40:13-43:29
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:38:13-41:29
 action#android.intent.action.MAIN
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:41:17-69
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:41:25-66
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:42:17-77
+ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:42:27-74
+		ADDED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml:40:27-74
 uses-sdk
 INJECTED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/admin/Documents/Android/Camera2SM/Application/src/main/AndroidManifest.xml
