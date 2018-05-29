@@ -166,7 +166,7 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
 
     void analizeSpectrum() {
 //        onPictureTaken(cameraBitmap);
-        croppedBitmap = Bitmap.createBitmap(cameraBitmap, cropX, cropY, 30, 30);
+        croppedBitmap = Bitmap.createBitmap(cameraBitmap, cropX, cropY, 50, 50);
 
 
         int color = getDominantColor(croppedBitmap);
@@ -244,8 +244,8 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
         this.porcentagem = 20;
         if (bitmap != null) {
             double var_R1;
-            int measureX = cropX + 15;  //dpToPx(5);
-            int measureY = cropY + 15; // dpToPx(5);
+            int measureX = cropX + 25;  //dpToPx(5);
+            int measureY = cropY + 25; // dpToPx(5);
             int index = bitmap.getPixel(measureX, measureY);
 
             int R1 = (index >> 16) & ACTION_MASK;  //MotionEventCompat.ACTION_MASK;

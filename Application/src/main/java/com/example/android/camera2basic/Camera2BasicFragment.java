@@ -27,11 +27,18 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
 import android.hardware.camera2.CameraCharacteristics;
@@ -67,6 +74,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.File;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -158,16 +166,33 @@ public class Camera2BasicFragment extends Fragment
         public void onSurfaceTextureUpdated(SurfaceTexture texture) {
 //            setRGB();
 
-//            Bitmap wholeBitmap = mTextureView.getBitmap();
+            Bitmap bitmapImage = mTextureView.getBitmap();
 //            int cropX = (mTextureView.getWidth() / 2) - dpToPx(25);
 //            int cropY = (mTextureView.getHeight() / 2) - dpToPx(25);
 //            final Bitmap croppedBitmap = Bitmap.createBitmap(wholeBitmap, cropX, cropY, dpToPx(50), dpToPx(50));
 //            drawHistogram(croppedBitmap);
 //            wholeBitmap.recycle();
 //            croppedBitmap.recycle();
+
+
+//            final Bitmap bitmapImage = mTextureView.getBitmap();
+            int cropX = (bitmapImage.getWidth() / 2) - 30; //dpToPx(5);
+            int cropY = (bitmapImage.getHeight() / 2) - 30; //dpToPx(5);
+            final Bitmap croppedBitmap = Bitmap.createBitmap(bitmapImage, cropX, cropY, 60, 60);
+            int domColor = getDominantColor(croppedBitmap);
+            float lum = Color.luminance(domColor);
+            if (lum >= 0.6)
+                setSightViewColor(Color.BLACK);
+            else if (lum < 0.6)
+                setSightViewColor(Color.WHITE);
         }
     };
 
+    void setSightViewColor(int toApply){
+        GradientDrawable bgShape = (GradientDrawable)sightView.getBackground();
+        bgShape.setStroke (4, toApply);
+//        bgShape.setStroke(2, toApply, 4, 1);
+    }
     /**
      * ID of the current {@link CameraDevice}.
      */
@@ -262,17 +287,20 @@ public class Camera2BasicFragment extends Fragment
 //            buffer.get(bytes);
 //            final Bitmap bitmapImage = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
 ////            final Bitmap bitmapImage = mTextureView.getBitmap();
-//            int cropX = (bitmapImage.getWidth() / 2) - 50; //dpToPx(5);
-//            int cropY = (bitmapImage.getHeight() / 2) - 50; //dpToPx(5);
-//            final Bitmap croppedBitmap = Bitmap.createBitmap(bitmapImage, cropX, cropY, 100, 100); //dpToPx(10), dpToPx(10));
-//            Log.i( TAG, "mTextureWidth: "  + mTextureView.getWidth());
-//            Log.i( TAG, "mTextureHeigth: "  + mTextureView.getHeight());
-//
-//            Log.i( TAG, "imageWidth: "  + bitmapImage.getWidth());
-//            Log.i( TAG, "imageHeigth: "  + bitmapImage.getHeight());
-//
-//            Log.i( TAG, "cropX: "  + cropX);
-//            Log.i( TAG, "cropY: "  + cropY);
+//            int cropX = (bitmapImage.getWidth() / 2) - 20; //dpToPx(5);
+//            int cropY = (bitmapImage.getHeight() / 2) - 20; //dpToPx(5);
+//            final Bitmap croppedBitmap = Bitmap.createBitmap(bitmapImage, cropX, cropY, 40, 40);
+//            int domColor = getDominantColor(croppedBitmap);
+//            float lum = Color.luminance(domColor);
+//            LayerDrawable layers = (LayerDrawable) sightView.getBackground();
+//            GradientDrawable shape = (GradientDrawable) (layers.findDrawableByLayerId(R.id.graph));
+//            if (lum >= 0.175)
+//                shape.setColor(Color.BLACK);
+//            else if (lum <= 0.1833)
+//                shape.setColor(Color.WHITE);
+
+            // "cellLabel" background colour of textview or button etc.
+
 
 
 //            getActivity().runOnUiThread(new Runnable() {
@@ -294,6 +322,41 @@ public class Camera2BasicFragment extends Fragment
 
     };
 
+    public static int getDominantColor(Bitmap bitmap) {
+        if (null == bitmap) return Color.TRANSPARENT;
+
+        int redBucket = 0;
+        int greenBucket = 0;
+        int blueBucket = 0;
+        int alphaBucket = 0;
+
+        boolean hasAlpha = bitmap.hasAlpha();
+        int pixelCount = bitmap.getWidth() * bitmap.getHeight();
+        int[] pixels = new int[pixelCount];
+        bitmap.getPixels(pixels, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
+
+        for (int y = 0, h = bitmap.getHeight(); y < h; y++) {
+            for (int x = 0, w = bitmap.getWidth(); x < w; x++) {
+                int color = pixels[x + y * w]; // x + y * width
+                redBucket += (color >> 16) & 0xFF; // Color.red
+                greenBucket += (color >> 8) & 0xFF; // Color.greed
+                blueBucket += (color & 0xFF); // Color.blue
+                if (hasAlpha) alphaBucket += (color >>> 24); // Color.alpha
+            }
+        }
+
+        return Color.rgb(
+                redBucket / pixelCount,
+                greenBucket / pixelCount,
+                blueBucket / pixelCount);
+
+//        return Color.argb(
+//                        (hasAlpha) ? (alphaBucket / pixelCount) : 255,
+//                        redBucket / pixelCount,
+//                        greenBucket / pixelCount,
+//                        blueBucket / pixelCount);
+
+    }
     /**
      * {@link CaptureRequest.Builder} for the camera preview
      */

@@ -36,8 +36,8 @@
 
     <com.example.android.camera2basic.SightView
         android:id="@+id/sightView"
-        android:layout_width="30px"
-        android:layout_height="30px"
+        android:layout_width="50px"
+        android:layout_height="50px"
         android:layout_centerInParent="true"
         android:background="@drawable/dotted" />
 
