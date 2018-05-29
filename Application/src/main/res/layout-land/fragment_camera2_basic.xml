@@ -25,55 +25,20 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
-    <FrameLayout
-        android:id="@+id/control"
-        android:layout_width="115dp"
+    <ImageButton
+        android:id="@+id/flashButton"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
+        android:layout_gravity="start|top"
+        android:padding="20dp"
+        android:src="@mipmap/ic_flash_auto" />
 
-        android:background="@color/control_background"
-        android:orientation="vertical">
-    <!--android:layout_toRightOf="@id/texture"-->
-        <TextView
-            android:id="@+id/colorRed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/colorGreen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/colorBlue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/color"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/picture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="@string/picture" />
-        <!--android:layout_gravity="center"-->
-        <ImageButton
-            android:id="@+id/info"
-            style="@android:style/Widget.Material.Light.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:contentDescription="@string/description_info"
-            android:padding="20dp"
-            android:src="@drawable/ic_action_info" />
-        <!--android:layout_gravity="center_horizontal|bottom"-->
-
-    </FrameLayout>
+    <com.example.android.camera2basic.SightView
+        android:id="@+id/sightView"
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dotted" />
 
 </RelativeLayout>

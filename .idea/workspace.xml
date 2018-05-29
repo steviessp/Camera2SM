@@ -10,54 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dcb7af7-bdc0-435e-90a9-7f52afdc30d5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/ic_flash_auto-web.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/ic_flash_off-web.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/ic_flash_on-web.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-anydpi-v26/ic_flash_auto.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-anydpi-v26/ic_flash_auto_round.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-anydpi-v26/ic_flash_off.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-anydpi-v26/ic_flash_off_round.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-anydpi-v26/ic_flash_on.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-anydpi-v26/ic_flash_on_round.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_auto.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_auto_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_off.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_off_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_on.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_on_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-hdpi/ic_flash_on_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_auto.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_auto_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_off.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_off_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_on.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_on_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-mdpi/ic_flash_on_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_auto.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_auto_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_off.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_off_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_on.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_on_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xhdpi/ic_flash_on_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_auto.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_auto_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_off.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_off_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_on.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_on_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxhdpi/ic_flash_on_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_auto.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_auto_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_off.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_off_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_on.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_on_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/mipmap-xxxhdpi/ic_flash_on_round.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/values/ic_flash_on_background.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
@@ -65,7 +20,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.iml" afterPath="$PROJECT_DIR$/Application/Application.iml" />
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/compat/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/compat/R.java" />
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/coreui/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/coreui/R.java" />
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/coreutils/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/coreutils/R.java" />
@@ -76,52 +30,17 @@
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v13/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v13/R.java" />
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v4/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v4/R.java" />
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/cardview/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/cardview/R.java" />
       <change beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/example/android/camera2basic/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/example/android/camera2basic/R.java" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi-v2/debug.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi-v2/debug.json" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi-v2/values.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi-v2/values.json" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/debug.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/debug.json" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/compat/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreui/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/coreutils/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/fragment/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/mediacompat/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v13/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v4/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$1.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$2.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$3.class" />
@@ -136,22 +55,16 @@
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$ErrorDialog.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$ErrorDialog.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$ImageSaver.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment$ImageSaver.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/Camera2BasicFragment.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$color.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$dimen.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$drawable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$drawable.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$id.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$integer.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$integer.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$layout.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$layout.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$string.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$style.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R$styleable.class" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/camera2basic/R.class" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/debug/resources-debug.ap_" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout_fragment_camera2_basic.xml.flat" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout_fragment_camera2_basic.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values_values.arsc.flat" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values_values.arsc.flat" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout-land_fragment_camera2_basic.xml.flat" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout-land_fragment_camera2_basic.xml.flat" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/symbols/debug/R.txt" />
       <change beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/dexBuilder/debug/__content__.json" />
@@ -161,8 +74,7 @@
       <change beforePath="$PROJECT_DIR$/Application/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/Application/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change beforePath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java" />
-      <change beforePath="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_basic.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_basic.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -200,22 +112,32 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="fragment_camera2_basic.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="43" />
+            <state relative-caret-position="275">
+              <caret line="32" column="48" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="32" selection-end-column="48" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="AutoFitTextureView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/AutoFitTextureView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Camera2BasicFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="1096" column="5" lean-forward="true" selection-start-line="1096" selection-start-column="5" selection-end-line="1096" selection-end-column="5" />
+            <state relative-caret-position="99">
+              <caret line="644" column="77" lean-forward="false" selection-start-line="644" selection-start-column="77" selection-end-line="644" selection-end-column="77" />
               <folding>
                 <element signature="docComment;field#ORIENTATIONS#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="initializer##0;class#Camera2BasicFragment#0" expanded="false" />
@@ -228,27 +150,22 @@
                 <element signature="docComment;field#MAX_PREVIEW_WIDTH#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#MAX_PREVIEW_HEIGHT#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mSurfaceTextureListener#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="class#4609:5679" expanded="false" />
-                <element signature="method#onSurfaceTextureAvailable#0;class#4609:5679" expanded="false" />
-                <element signature="method#onSurfaceTextureSizeChanged#0;class#4609:5679" expanded="false" />
-                <element signature="method#onSurfaceTextureUpdated#0;class#4609:5679" expanded="false" />
-                <element signature="e#5202#5225#0" expanded="false" />
+                <element signature="method#onSurfaceTextureUpdated#0;class#4668:5738" expanded="false" />
+                <element signature="e#5261#5284#0" expanded="false" />
                 <element signature="docComment;field#mCameraId#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mTextureView#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mCaptureSession#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mCameraDevice#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mPreviewSize#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mStateCallback#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="class#6416:7336" expanded="false" />
-                <element signature="method#onOpened#0;class#6416:7336" expanded="false" />
-                <element signature="method#onDisconnected#0;class#6416:7336" expanded="false" />
-                <element signature="method#onError#0;class#6416:7336" expanded="false" />
+                <element signature="method#onDisconnected#0;class#6475:7395" expanded="false" />
+                <element signature="method#onError#0;class#6475:7395" expanded="false" />
                 <element signature="docComment;field#mBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mBackgroundHandler#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mImageReader#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mFile#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mOnImageAvailableListener#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#8179#8241#0" expanded="false" />
+                <element signature="e#8238#8300#0" expanded="false" />
                 <element signature="docComment;field#mPreviewRequestBuilder#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mPreviewRequest#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mState#0;class#Camera2BasicFragment#0" expanded="false" />
@@ -256,43 +173,33 @@
                 <element signature="docComment;field#mFlashSupported#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mSensorOrientation#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mCaptureCallback#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="class#10891:13794" expanded="false" />
-                <element signature="method#process#0;class#10891:13794" expanded="false" />
-                <element signature="method#onCaptureProgressed#0;class#10891:13794" expanded="false" />
-                <element signature="method#onCaptureCompleted#0;class#10891:13794" expanded="false" />
-                <element signature="e#13906#13955#0" expanded="false" />
+                <element signature="class#11041:13944" expanded="false" />
+                <element signature="method#process#0;class#11041:13944" expanded="false" />
+                <element signature="method#onCaptureProgressed#0;class#11041:13944" expanded="false" />
+                <element signature="method#onCaptureCompleted#0;class#11041:13944" expanded="false" />
+                <element signature="e#14056#14105#0" expanded="false" />
                 <element signature="docComment;method#chooseOptimalSize#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#chooseOptimalSize#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#16424#16505#0" expanded="false" />
-                <element signature="method#dpToPx#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#pxToDp#0;class#Camera2BasicFragment#0" expanded="false" />
+                <element signature="e#16574#16655#0" expanded="false" />
+                <element signature="e#17116#17117#0" expanded="true" />
+                <element signature="e#17165#17166#0" expanded="true" />
                 <element signature="method#onCreateView#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#onViewCreated#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#onActivityCreated#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#18369#18451#0" expanded="false" />
+                <element signature="e#18268#18350#0" expanded="false" />
                 <element signature="method#onPause#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#requestCameraPermission#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#setUpCameraOutputs#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#setUpCameraOutputs#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="e#21818#21901#0" expanded="false" />
-                <element signature="e#23889#23973#0" expanded="false" />
-                <element signature="e#25324#25406#0" expanded="false" />
+                <element signature="e#25429#25511#0" expanded="false" />
                 <element signature="docComment;method#openCamera#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#openCamera#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#closeCamera#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#closeCamera#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#startBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#startBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#stopBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#stopBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#createCameraPreviewSession#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#createCameraPreviewSession#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="class#29171:30929" expanded="false" />
-                <element signature="method#onConfigured#0;class#29171:30929" expanded="false" />
-                <element signature="method#onConfigureFailed#0;class#29171:30929" expanded="false" />
+                <element signature="method#onConfigureFailed#0;class#29276:31094" expanded="false" />
                 <element signature="docComment;method#configureTransform#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#configureTransform#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#takePicture#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#takePicture#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#lockFocus#0;class#Camera2BasicFragment#0" expanded="false" />
@@ -303,90 +210,70 @@
                 <element signature="method#captureStillPicture#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;method#getOrientation#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#getOrientation#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#36627#36711#0" expanded="false" />
+                <element signature="e#36889#36973#0" expanded="false" />
                 <element signature="docComment;method#unlockFocus#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#unlockFocus#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="method#onClick#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#39147#39183#0" expanded="false" />
-                <element signature="class#FlashMode#0;class#Camera2BasicFragment#0" expanded="false" />
+                <element signature="e#39687#39723#0" expanded="false" />
+                <element signature="method#toggleFlashMode#0;class#Camera2BasicFragment#0" expanded="false" />
+                <element signature="method#setFlashMode#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#setAutoFlash#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#onTouch#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#43848#43912#0" expanded="false" />
-                <element signature="e#44007#44059#0" expanded="false" />
+                <element signature="e#43315#43379#0" expanded="false" />
+                <element signature="e#43474#43526#0" expanded="false" />
                 <element signature="docComment;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mImage#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;field#mFile#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#ImageSaver#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#run#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#44785#44853#0" expanded="false" />
+                <element signature="e#44252#44320#0" expanded="false" />
                 <element signature="docComment;class#CompareSizesByArea#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="class#CompareSizesByArea#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#compare#0;class#CompareSizesByArea#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#newInstance#0;class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#46430#46438#0" expanded="false" />
+                <element signature="e#45897#45905#0" expanded="false" />
                 <element signature="method#onCreateDialog#0;class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="docComment;class#ConfirmationDialog#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="class#ConfirmationDialog#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#47226#47234#0" expanded="false" />
+                <element signature="e#46693#46701#0" expanded="false" />
                 <element signature="method#onCreateDialog#0;class#ConfirmationDialog#0;class#Camera2BasicFragment#0" expanded="false" />
                 <element signature="method#drawColorGamut#0;class#Camera2BasicFragment#0" expanded="false" />
-                <element signature="e#48592#48640#0" expanded="false" />
+                <element signature="e#48059#48107#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/CameraActivity.java">
+      <file leaf-file-name="StreamConfigurationMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/params/StreamConfigurationMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/View.java">
+      <file leaf-file-name="TextureView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/TextureView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-509">
-              <caret line="12872" column="0" lean-forward="false" selection-start-line="12872" selection-start-column="0" selection-end-line="12872" selection-end-column="0" />
+            <state relative-caret-position="326">
+              <caret line="388" column="21" lean-forward="false" selection-start-line="388" selection-start-column="21" selection-end-line="388" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaptureRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/CaptureRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="626" column="0" lean-forward="false" selection-start-line="626" selection-start-column="0" selection-end-line="626" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
+      <file leaf-file-name="fragment_camera2_basic.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_basic.xml">
+          <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/CameraManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
+            <state relative-caret-position="327">
+              <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -405,16 +292,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>context</find>
-      <find>OnClick</find>
-      <find>view</find>
-      <find>OnTouch</find>
-      <find>takep</find>
-      <find>croppedBitmap</find>
-      <find>switc</find>
-      <find>VISIBLE</find>
-      <find>switch</find>
-      <find>histogramDrawn</find>
       <find>ontouch</find>
       <find>onclick</find>
       <find>onTouch</find>
@@ -425,7 +302,6 @@
       <find>flash</find>
       <find>CaptureRequest.Builder</find>
       <find>mFlashMode</find>
-      <find>OnCreate</find>
       <find>mcamera</find>
       <find>manager</find>
       <find>CameraManager;</find>
@@ -435,6 +311,17 @@
       <find>takepi</find>
       <find>resume</find>
       <find>onResu</find>
+      <find>wait</find>
+      <find>capturesession</find>
+      <find>mCaptureSession</find>
+      <find>onResume</find>
+      <find>setAutoFlash</find>
+      <find>FlashMode</find>
+      <find>setFlashMode</find>
+      <find>openCamera</find>
+      <find>OnCreate</find>
+      <find>setFl</find>
+      <find>mPreviewSize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3441,10 +3328,11 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_spectrum.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/SpectrumActivity.java" />
         <option value="$PROJECT_DIR$/Application/build.gradle" />
-        <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/Application/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_basic.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java" />
       </list>
     </option>
@@ -3470,8 +3358,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -3530,11 +3416,24 @@
               <item name="Application" type="feadf853:AndroidModuleNode" />
               <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
+            <path>
+              <item name="Camera2SM" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Camera2SM" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3774,7 +3673,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527260623180</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added FlashMode switching">
+      <created>1527519980581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527519980582</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3789,10 +3695,10 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984109" sideWeight="0.5058573" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30085197" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35414302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37116912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3802,7 +3708,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34960273" sideWeight="0.4941427" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34960273" sideWeight="0.4941427" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18451178" sideWeight="0.50584793" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3821,7 +3727,9 @@
     <MESSAGE value="Added other spectrum analisis data, left side formatted" />
     <MESSAGE value="Added Spectrum Diagram - intensity power wavelenght in CameraActivity" />
     <MESSAGE value="App now gets camera preview in first - Main Activity, and when touched, goes to second activity, where shows Spectrum information." />
-    <option name="LAST_COMMIT_MESSAGE" value="App now gets camera preview in first - Main Activity, and when touched, goes to second activity, where shows Spectrum information." />
+    <MESSAGE value="Added FlashMode switching" />
+    <MESSAGE value="Application now extends Camera Preview on whole screen, rotates, and resumes Flash Mode after coming form second activity to first" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application now extends Camera Preview on whole screen, rotates, and resumes Flash Mode after coming form second activity to first" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3834,7 +3742,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
-          <line>256</line>
+          <line>258</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
@@ -3850,23 +3758,67 @@
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
-          <line>1054</line>
+          <line>818</line>
           <properties />
-          <option name="timeStamp" value="102" />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>598</line>
+          <properties />
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>595</line>
+          <properties />
+          <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
-          <line>1087</line>
+          <line>143</line>
           <properties />
-          <option name="timeStamp" value="103" />
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>631</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>635</line>
+          <properties />
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>617</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>647</line>
+          <properties />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java</url>
+          <line>142</line>
+          <properties method="onSurfaceTextureAvailable">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="104" />
+      <option name="time" value="132" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -3881,11 +3833,17 @@
         <watch expression="histogramView.getMaxWidth()" />
         <watch expression="histogramView.getWidth(); " />
         <watch expression="((RelativeLayout )histogramView.getParent()).getWidth()  " />
+        <watch expression="mFlashMode" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>mFlashMode</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>histogramView.getWidth()</expression-string>
         <language-id>JAVA</language-id>
@@ -3894,62 +3852,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="1502" column="11" lean-forward="false" selection-start-line="1502" selection-start-column="11" selection-end-line="1502" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/com/android/internal/util/FastMath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jjoe64/graphview/4.2.2/b518d09891b93df1172b3e2ee5726942341d1fe1/graphview-4.2.2-sources.jar!/com/jjoe64/graphview/GridLabelRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="1575" column="16" lean-forward="false" selection-start-line="1575" selection-start-column="16" selection-end-line="1575" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-596">
-          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="777" column="97" lean-forward="false" selection-start-line="777" selection-start-column="97" selection-end-line="777" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/MotionEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="2041" column="23" lean-forward="false" selection-start-line="2041" selection-start-column="23" selection-end-line="2041" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/widget/ImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="425" column="20" lean-forward="false" selection-start-line="425" selection-start-column="20" selection-end-line="425" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/ViewGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -3962,17 +3864,6 @@
         <state relative-caret-position="17">
           <caret line="888" column="16" lean-forward="false" selection-start-line="888" selection-start-column="16" selection-end-line="888" selection-end-column="16" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_camera.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/BitmapHelper.java">
@@ -4096,13 +3987,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/ActivityHelper_.java" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/HistogramHelper.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/AutoFitTextureView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OpenCVLibrary341/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -4287,19 +4171,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="36" selection-end-column="86" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/CameraActivity.java">
@@ -4310,18 +4182,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/CameraManager.java">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
+        <state relative-caret-position="213741">
+          <caret line="12872" column="0" lean-forward="false" selection-start-line="12872" selection-start-column="0" selection-end-line="12872" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/FragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1587" column="0" lean-forward="false" selection-start-line="1587" selection-start-column="0" selection-end-line="1587" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1548" column="16" lean-forward="false" selection-start-line="1548" selection-start-column="16" selection-end-line="1548" selection-end-column="16" />
+          <folding>
+            <element signature="e#60767#60768#0" expanded="false" />
+            <element signature="e#60797#60798#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/CaptureRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="17">
           <caret line="626" column="0" lean-forward="false" selection-start-line="626" selection-start-column="0" selection-end-line="626" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/widget/AppCompatImageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/widget/AppCompatImageButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/RectF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="52" column="11" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_camera.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/AutoFitTextureView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/CameraManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="428" column="16" lean-forward="false" selection-start-line="428" selection-start-column="16" selection-end-line="428" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -4331,24 +4273,56 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+        <state relative-caret-position="403">
+          <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <folding>
+            <element signature="e#1298#1316#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_basic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="32" column="48" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_basic.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/View.java">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/TextureView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-509">
-          <caret line="12872" column="0" lean-forward="false" selection-start-line="12872" selection-start-column="0" selection-end-line="12872" selection-end-column="0" />
+        <state relative-caret-position="326">
+          <caret line="388" column="21" lean-forward="false" selection-start-line="388" selection-start-column="21" selection-end-line="388" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/hardware/camera2/params/StreamConfigurationMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="1096" column="5" lean-forward="true" selection-start-line="1096" selection-start-column="5" selection-end-line="1096" selection-end-column="5" />
+        <state relative-caret-position="99">
+          <caret line="644" column="77" lean-forward="false" selection-start-line="644" selection-start-column="77" selection-end-line="644" selection-end-column="77" />
           <folding>
             <element signature="docComment;field#ORIENTATIONS#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="initializer##0;class#Camera2BasicFragment#0" expanded="false" />
@@ -4361,27 +4335,22 @@
             <element signature="docComment;field#MAX_PREVIEW_WIDTH#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#MAX_PREVIEW_HEIGHT#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mSurfaceTextureListener#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="class#4609:5679" expanded="false" />
-            <element signature="method#onSurfaceTextureAvailable#0;class#4609:5679" expanded="false" />
-            <element signature="method#onSurfaceTextureSizeChanged#0;class#4609:5679" expanded="false" />
-            <element signature="method#onSurfaceTextureUpdated#0;class#4609:5679" expanded="false" />
-            <element signature="e#5202#5225#0" expanded="false" />
+            <element signature="method#onSurfaceTextureUpdated#0;class#4668:5738" expanded="false" />
+            <element signature="e#5261#5284#0" expanded="false" />
             <element signature="docComment;field#mCameraId#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mTextureView#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mCaptureSession#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mCameraDevice#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mPreviewSize#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mStateCallback#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="class#6416:7336" expanded="false" />
-            <element signature="method#onOpened#0;class#6416:7336" expanded="false" />
-            <element signature="method#onDisconnected#0;class#6416:7336" expanded="false" />
-            <element signature="method#onError#0;class#6416:7336" expanded="false" />
+            <element signature="method#onDisconnected#0;class#6475:7395" expanded="false" />
+            <element signature="method#onError#0;class#6475:7395" expanded="false" />
             <element signature="docComment;field#mBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mBackgroundHandler#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mImageReader#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mFile#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mOnImageAvailableListener#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#8179#8241#0" expanded="false" />
+            <element signature="e#8238#8300#0" expanded="false" />
             <element signature="docComment;field#mPreviewRequestBuilder#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mPreviewRequest#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mState#0;class#Camera2BasicFragment#0" expanded="false" />
@@ -4389,43 +4358,33 @@
             <element signature="docComment;field#mFlashSupported#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mSensorOrientation#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mCaptureCallback#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="class#10891:13794" expanded="false" />
-            <element signature="method#process#0;class#10891:13794" expanded="false" />
-            <element signature="method#onCaptureProgressed#0;class#10891:13794" expanded="false" />
-            <element signature="method#onCaptureCompleted#0;class#10891:13794" expanded="false" />
-            <element signature="e#13906#13955#0" expanded="false" />
+            <element signature="class#11041:13944" expanded="false" />
+            <element signature="method#process#0;class#11041:13944" expanded="false" />
+            <element signature="method#onCaptureProgressed#0;class#11041:13944" expanded="false" />
+            <element signature="method#onCaptureCompleted#0;class#11041:13944" expanded="false" />
+            <element signature="e#14056#14105#0" expanded="false" />
             <element signature="docComment;method#chooseOptimalSize#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#chooseOptimalSize#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#16424#16505#0" expanded="false" />
-            <element signature="method#dpToPx#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#pxToDp#0;class#Camera2BasicFragment#0" expanded="false" />
+            <element signature="e#16574#16655#0" expanded="false" />
+            <element signature="e#17116#17117#0" expanded="true" />
+            <element signature="e#17165#17166#0" expanded="true" />
             <element signature="method#onCreateView#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#onViewCreated#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#onActivityCreated#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#18369#18451#0" expanded="false" />
+            <element signature="e#18268#18350#0" expanded="false" />
             <element signature="method#onPause#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#requestCameraPermission#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#setUpCameraOutputs#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#setUpCameraOutputs#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="e#21818#21901#0" expanded="false" />
-            <element signature="e#23889#23973#0" expanded="false" />
-            <element signature="e#25324#25406#0" expanded="false" />
+            <element signature="e#25429#25511#0" expanded="false" />
             <element signature="docComment;method#openCamera#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#openCamera#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#closeCamera#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#closeCamera#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#startBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#startBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#stopBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#stopBackgroundThread#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#createCameraPreviewSession#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#createCameraPreviewSession#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="class#29171:30929" expanded="false" />
-            <element signature="method#onConfigured#0;class#29171:30929" expanded="false" />
-            <element signature="method#onConfigureFailed#0;class#29171:30929" expanded="false" />
+            <element signature="method#onConfigureFailed#0;class#29276:31094" expanded="false" />
             <element signature="docComment;method#configureTransform#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#configureTransform#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#takePicture#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#takePicture#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#lockFocus#0;class#Camera2BasicFragment#0" expanded="false" />
@@ -4436,37 +4395,37 @@
             <element signature="method#captureStillPicture#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;method#getOrientation#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#getOrientation#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#36627#36711#0" expanded="false" />
+            <element signature="e#36889#36973#0" expanded="false" />
             <element signature="docComment;method#unlockFocus#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#unlockFocus#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="method#onClick#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#39147#39183#0" expanded="false" />
-            <element signature="class#FlashMode#0;class#Camera2BasicFragment#0" expanded="false" />
+            <element signature="e#39687#39723#0" expanded="false" />
+            <element signature="method#toggleFlashMode#0;class#Camera2BasicFragment#0" expanded="false" />
+            <element signature="method#setFlashMode#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#setAutoFlash#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#onTouch#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#43848#43912#0" expanded="false" />
-            <element signature="e#44007#44059#0" expanded="false" />
+            <element signature="e#43315#43379#0" expanded="false" />
+            <element signature="e#43474#43526#0" expanded="false" />
             <element signature="docComment;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mImage#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;field#mFile#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#ImageSaver#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#run#0;class#ImageSaver#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#44785#44853#0" expanded="false" />
+            <element signature="e#44252#44320#0" expanded="false" />
             <element signature="docComment;class#CompareSizesByArea#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="class#CompareSizesByArea#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#compare#0;class#CompareSizesByArea#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#newInstance#0;class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#46430#46438#0" expanded="false" />
+            <element signature="e#45897#45905#0" expanded="false" />
             <element signature="method#onCreateDialog#0;class#ErrorDialog#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="docComment;class#ConfirmationDialog#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="class#ConfirmationDialog#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#47226#47234#0" expanded="false" />
+            <element signature="e#46693#46701#0" expanded="false" />
             <element signature="method#onCreateDialog#0;class#ConfirmationDialog#0;class#Camera2BasicFragment#0" expanded="false" />
             <element signature="method#drawColorGamut#0;class#Camera2BasicFragment#0" expanded="false" />
-            <element signature="e#48592#48640#0" expanded="false" />
+            <element signature="e#48059#48107#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -52,6 +52,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -61,6 +62,7 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -123,12 +125,12 @@ public class Camera2BasicFragment extends Fragment
     /**
      * Max preview width that is guaranteed by Camera2 API
      */
-    private static final int MAX_PREVIEW_WIDTH = 1920;
+    private static int MAX_PREVIEW_WIDTH = 1920;
 
     /**
      * Max preview height that is guaranteed by Camera2 API
      */
-    private static final int MAX_PREVIEW_HEIGHT = 1080;
+    private static int MAX_PREVIEW_HEIGHT = 1080;
 
     /**
      * {@link TextureView.SurfaceTextureListener} handles several lifecycle events on a
@@ -328,6 +330,12 @@ public class Camera2BasicFragment extends Fragment
     private SightView sightView;
     private ImageButton flashButton;
 
+    public enum FlashMode {
+        FLASH_AUTO,
+        FLASH_ON,
+        FLASH_OFF
+    }
+
     /**
      * A {@link CameraCaptureSession.CaptureCallback} that handles events related to JPEG capture.
      */
@@ -467,15 +475,6 @@ public class Camera2BasicFragment extends Fragment
         return new Camera2BasicFragment();
     }
 
-    public static int dpToPx(int dp) {
-        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
-    }
-
-    public static int pxToDp(int px) {
-        return (int) (px / Resources.getSystem().getDisplayMetrics().density);
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -517,7 +516,11 @@ public class Camera2BasicFragment extends Fragment
         } else {
             mTextureView.setSurfaceTextureListener(mSurfaceTextureListener);
         }
-        setFlashMode(mFlashMode);
+
+//        if (mCaptureSession == null) {
+//            createCameraPreviewSession();
+//        }
+//        setFlashMode(mFlashMode);
     }
 
     @Override
@@ -558,6 +561,7 @@ public class Camera2BasicFragment extends Fragment
      */
     @SuppressWarnings("SuspiciousNameCombination")
     private void setUpCameraOutputs(int width, int height) {
+
         Activity activity = getActivity();
         CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
         try {
@@ -634,11 +638,11 @@ public class Camera2BasicFragment extends Fragment
 
                 // Danger, W.R.! Attempting to use too large a preview size could  exceed the camera
                 // bus' bandwidth limitation, resulting in gorgeous previews but the storage of
-                // garbage capture data.
-                mPreviewSize = chooseOptimalSize(map.getOutputSizes(SurfaceTexture.class),
-                        rotatedPreviewWidth, rotatedPreviewHeight, maxPreviewWidth,
-                        maxPreviewHeight, largest);
-
+                // garbage capture data.mPreviewSize = chooseOptimalSize(map.getOutputSizes(SurfaceTexture.class),
+                ////                        rotatedPreviewWidth, rotatedPreviewHeight, maxPreviewWidth,
+                ////                        maxPreviewHeight, largest);
+//
+                mPreviewSize = new Size(MAX_PREVIEW_WIDTH, MAX_PREVIEW_HEIGHT);
 
                 // We fit the aspect ratio of TextureView to the size of preview we picked.
                 int orientation = getResources().getConfiguration().orientation;
@@ -777,7 +781,8 @@ public class Camera2BasicFragment extends Fragment
                                 mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,
                                         CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
                                 // Flash is automatically enabled when necessary.
-                                setAutoFlash(mPreviewRequestBuilder);
+//                                setAutoFlash(mPreviewRequestBuilder);
+                                setFlashMode(mFlashMode);
 
                                 // Finally, we start displaying the camera preview.
                                 mPreviewRequest = mPreviewRequestBuilder.build();
@@ -819,6 +824,7 @@ public class Camera2BasicFragment extends Fragment
         Matrix matrix = new Matrix();
         RectF viewRect = new RectF(0, 0, viewWidth, viewHeight);
         RectF bufferRect = new RectF(0, 0, mPreviewSize.getHeight(), mPreviewSize.getWidth());
+//        RectF bufferRect = new RectF(0, 0, mPreviewSize.getWidth(), mPreviewSize.getHeight());
         float centerX = viewRect.centerX();
         float centerY = viewRect.centerY();
         if (Surface.ROTATION_90 == rotation || Surface.ROTATION_270 == rotation) {
@@ -988,6 +994,13 @@ public class Camera2BasicFragment extends Fragment
             }
             case R.id.flashButton: {
                 toggleFlashMode();
+                try {
+
+
+                    mPreviewRequest = mPreviewRequestBuilder.build();
+                    mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback, mBackgroundHandler);
+                } catch (CameraAccessException cae) {
+                }
                 break;
             }
 
@@ -1014,79 +1027,68 @@ public class Camera2BasicFragment extends Fragment
         }
     }
 
-    public enum FlashMode {
-        FLASH_AUTO,
-        FLASH_ON,
-        FLASH_OFF
-    }
-
     public FlashMode mFlashMode;
 
-    private void toggleFlashMode() {
+    void toggleFlashMode() {
 
         switch (mFlashMode) {
             //AUTO->ON->OFF->AUTO
             case FLASH_AUTO:
                 setFlashMode(FlashMode.FLASH_ON);
-
-//                mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
-//                mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_TORCH);
-//                flashButton.setImageResource(R.mipmap.ic_flash_on);
-//                mFlashMode = FlashMode.FLASH_ON;
                 break;
             case FLASH_ON:
                 setFlashMode(FlashMode.FLASH_OFF);
-//                mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
-//                mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_OFF);
-//                flashButton.setImageResource(R.mipmap.ic_flash_off);
-//                mFlashMode = FlashMode.FLASH_OFF;
                 break;
             case FLASH_OFF:
                 setFlashMode(FlashMode.FLASH_AUTO);
-//                mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
-//                mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_SINGLE);
-//                flashButton.setImageResource(R.mipmap.ic_flash_auto);
-//                mFlashMode = FlashMode.FLASH_AUTO;
                 break;
         }
     }
 
-    private void setFlashMode(FlashMode mode) {
+    void setFlashMode(FlashMode mode) {
         if (mPreviewRequestBuilder == null)
             return;
-        try {
-            if (mFlashSupported) {
-                switch (mode) {
-                    //AUTO->ON->OFF->AUTO
-                    case FLASH_AUTO:
-                        mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
-                        mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_SINGLE);
-                        flashButton.setImageResource(R.mipmap.ic_flash_auto);
-                        mFlashMode = FlashMode.FLASH_AUTO;
-                        break;
-                    case FLASH_ON:
-                        mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
-                        mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_TORCH);
-                        flashButton.setImageResource(R.mipmap.ic_flash_on);
-                        mFlashMode = FlashMode.FLASH_ON;
-                        break;
-                    case FLASH_OFF:
-                        mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
-                        mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_OFF);
-                        flashButton.setImageResource(R.mipmap.ic_flash_off);
-                        mFlashMode = FlashMode.FLASH_OFF;
-                        break;
-                }
+        if (mFlashSupported) {
+            switch (mode) {
+                //AUTO->ON->OFF->AUTO
+                case FLASH_AUTO:
+                    mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
+                    mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_SINGLE);
+                    this.getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            flashButton.setImageResource(R.mipmap.ic_flash_auto);
+                        }//public void run() {
+                    });
 
-                mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureCallback,
-                        mBackgroundHandler);
-                // After this, the camera will go back to the normal state of preview.
-                mState = STATE_PREVIEW;
-                mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback, mBackgroundHandler);
+                    mFlashMode = FlashMode.FLASH_AUTO;
+                    break;
+                case FLASH_ON:
+                    mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
+                    mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_TORCH);
+
+                    this.getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            flashButton.setImageResource(R.mipmap.ic_flash_on);
+                        }//public void run() {
+                    });
+                    mFlashMode = FlashMode.FLASH_ON;
+                    break;
+                case FLASH_OFF:
+                    mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
+                    mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_OFF);
+                    this.getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            flashButton.setImageResource(R.mipmap.ic_flash_off);
+                        }//public void run() {
+                    });
+                    mFlashMode = FlashMode.FLASH_OFF;
+                    break;
             }
-        } catch (CameraAccessException cae) {
-            Log.i("Switching Torch On error: ", cae.getMessage());
         }
+
     }
 
     private void setAutoFlash(CaptureRequest.Builder requestBuilder) {
