@@ -17,6 +17,7 @@
 package com.example.android.camera2basic;
 
 import android.Manifest;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,20 +26,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
 import android.hardware.camera2.CameraCharacteristics;
@@ -59,7 +55,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.util.DisplayMetrics;
+import android.support.v4.graphics.ColorUtils;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -69,8 +65,8 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.io.File;
@@ -84,7 +80,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class Camera2BasicFragment extends Fragment
-        implements View.OnClickListener, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
+        implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
     /**
      * Conversion from screen rotation to JPEG orientation.
@@ -103,7 +99,7 @@ public class Camera2BasicFragment extends Fragment
     /**
      * Tag for the {@link Log}.
      */
-    private static final String TAG = "Camera2BasicFragment";
+    private static final String TAG = "SpectrumAnalyzer_Main";
 
     /**
      * Camera state: Showing camera preview.
@@ -139,6 +135,7 @@ public class Camera2BasicFragment extends Fragment
      * Max preview height that is guaranteed by Camera2 API
      */
     private static int MAX_PREVIEW_HEIGHT = 1080;
+
 
     /**
      * {@link TextureView.SurfaceTextureListener} handles several lifecycle events on a
@@ -180,19 +177,20 @@ public class Camera2BasicFragment extends Fragment
             int cropY = (bitmapImage.getHeight() / 2) - 30; //dpToPx(5);
             final Bitmap croppedBitmap = Bitmap.createBitmap(bitmapImage, cropX, cropY, 60, 60);
             int domColor = getDominantColor(croppedBitmap);
-            float lum = Color.luminance(domColor);
-            if (lum >= 0.6)
+            double lum = ColorUtils.calculateLuminance(domColor);
+//            float lum = Color.luminance(domColor);
+            if (lum >= 0.1834) //(lum >= 0.6)
                 setSightViewColor(Color.BLACK);
-            else if (lum < 0.6)
+            else if (lum < 0.1833) //(lum < 0.6)
                 setSightViewColor(Color.WHITE);
         }
     };
 
-    void setSightViewColor(int toApply){
-        GradientDrawable bgShape = (GradientDrawable)sightView.getBackground();
-        bgShape.setStroke (4, toApply);
-//        bgShape.setStroke(2, toApply, 4, 1);
+    void setSightViewColor(int toApply) {
+        GradientDrawable bgShape = (GradientDrawable) sightView.getBackground();
+        bgShape.setStroke(4, toApply);
     }
+
     /**
      * ID of the current {@link CameraDevice}.
      */
@@ -281,43 +279,20 @@ public class Camera2BasicFragment extends Fragment
         @Override
         public void onImageAvailable(ImageReader reader) {
 
-//            final Image image = reader.acquireLatestImage();
-//            ByteBuffer buffer = image.getPlanes()[0].getBuffer();
-//            byte[] bytes = new byte[buffer.capacity()];
-//            buffer.get(bytes);
-//            final Bitmap bitmapImage = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
-////            final Bitmap bitmapImage = mTextureView.getBitmap();
-//            int cropX = (bitmapImage.getWidth() / 2) - 20; //dpToPx(5);
-//            int cropY = (bitmapImage.getHeight() / 2) - 20; //dpToPx(5);
-//            final Bitmap croppedBitmap = Bitmap.createBitmap(bitmapImage, cropX, cropY, 40, 40);
-//            int domColor = getDominantColor(croppedBitmap);
-//            float lum = Color.luminance(domColor);
-//            LayerDrawable layers = (LayerDrawable) sightView.getBackground();
-//            GradientDrawable shape = (GradientDrawable) (layers.findDrawableByLayerId(R.id.graph));
-//            if (lum >= 0.175)
-//                shape.setColor(Color.BLACK);
-//            else if (lum <= 0.1833)
-//                shape.setColor(Color.WHITE);
-
-            // "cellLabel" background colour of textview or button etc.
-
-
-
-//            getActivity().runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    histogramView.invalidate();
-//                    histogramView.setImageBitmap(null);
-//                    histogramView.setImageResource(0);
-
-//                    histogramView.setImageBitmap(croppedBitmap);
-
-            //drawHistogram(croppedBitmap);
-//
-//                }
-//            });
-
-//            mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
+            final Image image = reader.acquireLatestImage();
+            if (image == null)
+                return;
+            ByteBuffer buffer = image.getPlanes()[0].getBuffer();
+            byte[] bytes = new byte[buffer.capacity()];
+            buffer.get(bytes);
+//            BitmapFactory.Options options = new BitmapFactory.Options();
+//            options.inSampleSize = 2;
+            final Bitmap cameraBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
+            reader.close();
+            //Prepare data to be sent to second activity where Spectral Analysis is made
+            BMPSingleton.getInstance().setBitmap(cameraBitmap);
+            Intent spectrumIntent = new Intent(getActivity(), SpectrumActivity.class);
+            getActivity().startActivity(spectrumIntent);
         }
 
     };
@@ -357,6 +332,7 @@ public class Camera2BasicFragment extends Fragment
 //                        blueBucket / pixelCount);
 
     }
+
     /**
      * {@link CaptureRequest.Builder} for the camera preview
      */
@@ -392,6 +368,7 @@ public class Camera2BasicFragment extends Fragment
     private View view;
     private SightView sightView;
     private ImageButton flashButton;
+    private ProgressBar progressBar;
 
     public enum FlashMode {
         FLASH_AUTO,
@@ -555,8 +532,10 @@ public class Camera2BasicFragment extends Fragment
 
         mTextureView.setOnClickListener(this);
         mFlashMode = FlashMode.FLASH_AUTO;
-        flashButton.setImageResource(R.mipmap.ic_flash_auto);
+        flashButton.setImageResource(R.drawable.ic_flash_auto);
         flashButton.setOnClickListener(this);
+
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
     }
 
     @Override
@@ -580,13 +559,20 @@ public class Camera2BasicFragment extends Fragment
             mTextureView.setSurfaceTextureListener(mSurfaceTextureListener);
         }
 
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.INVISIBLE);
+                sightView.setVisibility(View.VISIBLE);
+            }
+        });
+
 //        if (mCaptureSession == null) {
 //            createCameraPreviewSession();
 //        }
-//        setFlashMode(mFlashMode);
     }
 
-    @Override
+
     public void onPause() {
         closeCamera();
         stopBackgroundThread();
@@ -844,8 +830,7 @@ public class Camera2BasicFragment extends Fragment
                                 mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,
                                         CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
                                 // Flash is automatically enabled when necessary.
-//                                setAutoFlash(mPreviewRequestBuilder);
-                                setFlashMode(mFlashMode);
+                                setFlashMode(mPreviewRequestBuilder);
 
                                 // Finally, we start displaying the camera preview.
                                 mPreviewRequest = mPreviewRequestBuilder.build();
@@ -966,7 +951,7 @@ public class Camera2BasicFragment extends Fragment
             // Use the same AE and AF modes as the preview.
             captureBuilder.set(CaptureRequest.CONTROL_AF_MODE,
                     CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
-            setAutoFlash(captureBuilder);
+            setFlashMode(captureBuilder);
 
             // Orientation
             int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
@@ -986,7 +971,7 @@ public class Camera2BasicFragment extends Fragment
             };
 
             mCaptureSession.stopRepeating();
-            mCaptureSession.abortCaptures();
+            //mCaptureSession.abortCaptures();
             mCaptureSession.capture(captureBuilder.build(), CaptureCallback, null);
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -1012,11 +997,14 @@ public class Camera2BasicFragment extends Fragment
      * finished.
      */
     private void unlockFocus() {
+        if (mCaptureSession == null)
+            return;
+
         try {
             // Reset the auto-focus trigger
             mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_TRIGGER,
                     CameraMetadata.CONTROL_AF_TRIGGER_CANCEL);
-            setAutoFlash(mPreviewRequestBuilder);
+            setFlashMode(mPreviewRequestBuilder);
             mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureCallback,
                     mBackgroundHandler);
             // After this, the camera will go back to the normal state of preview.
@@ -1032,15 +1020,25 @@ public class Camera2BasicFragment extends Fragment
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.texture: {
-                cameraBitmap = mTextureView.getBitmap();
-                int cropX = (int) sightView.getX();  //dpToPx(5);
-                int cropY = (int) sightView.getY(); // dpToPx(5);
-                BMPSingleton.getInstance().setBitmap(cameraBitmap);
-                BMPSingleton.getInstance().setCropX(cropX);
-                BMPSingleton.getInstance().setCropY(cropY);
+//                cameraBitmap = mTextureView.getBitmap();
+//                int cropX = (int) sightView.getX();  //dpToPx(5);
+//                int cropY = (int) sightView.getY(); // dpToPx(5);
+//                BMPSingleton.getInstance().setBitmap(cameraBitmap);
+//                BMPSingleton.getInstance().setCropX(cropX);
+//                BMPSingleton.getInstance().setCropY(cropY);
+//
+//                Intent spectrumIntent = new Intent(getActivity(), SpectrumActivity.class);
+//                getActivity().startActivity(spectrumIntent);
+                progressBar.setIndeterminate(true);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        sightView.setVisibility(View.INVISIBLE);
+                        progressBar.setVisibility(View.VISIBLE);
+                    }
+                });
 
-                Intent spectrumIntent = new Intent(getActivity(), SpectrumActivity.class);
-                getActivity().startActivity(spectrumIntent);
+
                 takePicture();
                 break;
             }
@@ -1058,11 +1056,10 @@ public class Camera2BasicFragment extends Fragment
             case R.id.flashButton: {
                 toggleFlashMode();
                 try {
-
-
                     mPreviewRequest = mPreviewRequestBuilder.build();
                     mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback, mBackgroundHandler);
                 } catch (CameraAccessException cae) {
+                    Log.i("Error switching flash: ", cae.getMessage());
                 }
                 break;
             }
@@ -1097,90 +1094,62 @@ public class Camera2BasicFragment extends Fragment
         switch (mFlashMode) {
             //AUTO->ON->OFF->AUTO
             case FLASH_AUTO:
-                setFlashMode(FlashMode.FLASH_ON);
+                mFlashMode = FlashMode.FLASH_ON;
                 break;
             case FLASH_ON:
-                setFlashMode(FlashMode.FLASH_OFF);
+                mFlashMode = FlashMode.FLASH_OFF;
+                ;
                 break;
             case FLASH_OFF:
-                setFlashMode(FlashMode.FLASH_AUTO);
+                mFlashMode = FlashMode.FLASH_AUTO;
                 break;
         }
+        setFlashMode(mPreviewRequestBuilder);
     }
 
-    void setFlashMode(FlashMode mode) {
-        if (mPreviewRequestBuilder == null)
-            return;
+    private void setFlashMode(CaptureRequest.Builder requestBuilder) {
         if (mFlashSupported) {
-            switch (mode) {
+//            requestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
+//                    CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH); //ORIGINAL setAutoFlash() code
+
+            switch (mFlashMode) {
                 //AUTO->ON->OFF->AUTO
                 case FLASH_AUTO:
-                    mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
-                    mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_SINGLE);
+                    requestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
+//                    flashButton.setImageResource( R.drawable.ic_flash_auto);
                     this.getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            flashButton.setImageResource(R.mipmap.ic_flash_auto);
+                            flashButton.setImageResource(R.drawable.ic_flash_auto);
                         }//public void run() {
                     });
 
                     mFlashMode = FlashMode.FLASH_AUTO;
                     break;
                 case FLASH_ON:
-                    mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
-                    mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_TORCH);
-
+                    requestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
+//                    flashButton.setImageResource(R.drawable.ic_flash_on);
                     this.getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            flashButton.setImageResource(R.mipmap.ic_flash_on);
+                            flashButton.setImageResource(R.drawable.ic_flash_on);
                         }//public void run() {
                     });
                     mFlashMode = FlashMode.FLASH_ON;
                     break;
                 case FLASH_OFF:
-                    mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
-                    mPreviewRequestBuilder.set(CaptureRequest.FLASH_MODE, CameraMetadata.FLASH_MODE_OFF);
+                    requestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
+//                    flashButton.setImageResource(R.drawable.ic_flash_off);
                     this.getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            flashButton.setImageResource(R.mipmap.ic_flash_off);
+                            flashButton.setImageResource(R.drawable.ic_flash_off);
                         }//public void run() {
                     });
                     mFlashMode = FlashMode.FLASH_OFF;
                     break;
             }
         }
-
-    }
-
-    private void setAutoFlash(CaptureRequest.Builder requestBuilder) {
-        if (mFlashSupported) {
-            requestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
-                    CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
-        }
-    }
-
-    @Override
-    public boolean onTouch(View view, MotionEvent motionEvent) {
-        // TODO Auto-generated method stub
-        switch (motionEvent.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-//                Log.i("Camera2Basic", "onTouch: ACTION_DOWN");
-                //some code...
-                break;
-            case MotionEvent.ACTION_UP:
-//                float x2 = motionEvent.getX() - x;
-//                float y2 = motionEvent.getY() - y;
-//                if (Math.abs(x2) > 50)
-//                    switchDiagrams();o
-                break;
-            default:
-                break;
-
-        }
-
-        return false;
     }
 
 

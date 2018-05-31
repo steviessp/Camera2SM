@@ -2,11 +2,9 @@ package com.example.android.camera2basic;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.os.Handler;
-import android.os.Looper;
+import android.os.Bundle;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -32,11 +30,12 @@ import org.opencv.imgproc.Imgproc;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.time.Clock;
 import java.util.ArrayList;
 import java.util.Collections;
 
 import static android.view.MotionEvent.ACTION_MASK;
+import static com.example.android.camera2basic.Constants.SIGHTVIEW_HEIGHT;
+import static com.example.android.camera2basic.Constants.SIGHTVIEW_WIDTH;
 import static java.lang.Math.PI;
 
 public class SpectrumActivity extends AppCompatActivity implements View.OnTouchListener {
@@ -124,8 +123,9 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
 
         BMPSingleton bmpSingleton = BMPSingleton.getInstance();
         cameraBitmap = bmpSingleton.getBitmap();
-        cropX = bmpSingleton.getCropX();
-        cropY = bmpSingleton.getCropY();
+        cropX = (cameraBitmap.getWidth() / 2) - (SIGHTVIEW_WIDTH / 2);
+        cropY = (cameraBitmap.getHeight() / 2) - (SIGHTVIEW_HEIGHT / 2);
+
         if (cameraBitmap == null || cropX == 0 || cropY == 0) {
             return;
         }
@@ -147,10 +147,6 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
 
     }
 
-//    @Override
-//    onClick(View view){
-//
-//    }
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -165,8 +161,7 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
     }
 
     void analizeSpectrum() {
-//        onPictureTaken(cameraBitmap);
-        croppedBitmap = Bitmap.createBitmap(cameraBitmap, cropX, cropY, 50, 50);
+        croppedBitmap = Bitmap.createBitmap(cameraBitmap, cropX, cropY, SIGHTVIEW_WIDTH, SIGHTVIEW_HEIGHT);
 
 
         int color = getDominantColor(croppedBitmap);
@@ -196,7 +191,7 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
         int spctrValue = spctr.GetCCT(redValue, greenValue, blueValue);
 
         double calcLuminance = spctr.GetLuminance(redValue, greenValue, blueValue);
-        float libLuminance = Color.luminance(color);
+//        float libLuminance = Color.luminance(color);
 
         CCTTextView.setText(String.valueOf(spctrValue));
 //        histogramView.setImageBitmap(croppedBitmap);
