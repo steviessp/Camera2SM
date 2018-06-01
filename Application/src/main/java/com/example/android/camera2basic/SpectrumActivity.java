@@ -38,7 +38,7 @@ import static com.example.android.camera2basic.Constants.SIGHTVIEW_HEIGHT;
 import static com.example.android.camera2basic.Constants.SIGHTVIEW_WIDTH;
 import static java.lang.Math.PI;
 
-public class SpectrumActivity extends AppCompatActivity implements View.OnTouchListener {
+public class SpectrumActivity extends AppCompatActivity {
 
     private TextView colorRedTextView;
     private TextView colorGreenTextView;
@@ -73,6 +73,7 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
     //    TextView colorName;
 //    TextView deltae;
     GraphView graph;
+    GraphView chromacityGraph;
     int graphRaw;
     //    TextView green;
 //    TextView hex;
@@ -83,6 +84,7 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
     //    TextView red;
     byte[] segura;
     LineGraphSeries<DataPoint> series;
+    LineGraphSeries<DataPoint> chromacitySeries;
     int seris;
     double var_B;
     double var_G;
@@ -131,10 +133,9 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
         }
 
         graph = (GraphView) findViewById(R.id.graph);
-        graph.setOnTouchListener(this);
-        analizeSpectrum();
+        analyzeSpectrum();
 
-
+        chromacityGraph = (GraphView) findViewById(R.id.chromacityGraph);
 
         histogramView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
             @Override
@@ -142,27 +143,11 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
                 drawHistogram(croppedBitmap);
             }
         });
-
-
-
     }
 
 
-    @Override
-    public boolean onTouch(View view, MotionEvent motionEvent) {
-
-//        switch ((view.getId())) {
-//            case R.id.graph: {
-//                if (croppedBitmap != null)
-//                    drawHistogram(croppedBitmap);
-//            }
-//        }
-        return false;
-    }
-
-    void analizeSpectrum() {
+    void analyzeSpectrum() {
         croppedBitmap = Bitmap.createBitmap(cameraBitmap, cropX, cropY, SIGHTVIEW_WIDTH, SIGHTVIEW_HEIGHT);
-
 
         int color = getDominantColor(croppedBitmap);
         float alpha = Color.alpha(color);
@@ -455,8 +440,6 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
             this.b2 = 0.0d;
             this.porcentagem = 75;
             this.porcentagem = 100;
-
-
         }
 
         this.L2 = this.L1;
@@ -467,13 +450,7 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
         this.b1 = 0.0d;
 
         this.segura = null;
-
-        /////
-
-
-
-
-        //////
+        drawChromacityDiagram(0.5, 0.5);
     }
 
     public void drawHistogram(Bitmap bitmap) {
@@ -524,6 +501,26 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
         }
     }
 
+    void drawColorGamut1() {
+//        vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+//
+//        vec3 xyY = vec3(pass_Position.xy, 100.0);
+//        vec3 XYZ = xyY.z * vec3(xyY.x / xyY.y, 1.0, (1.0 - xyY.x - xyY.y) / xyY.y);
+//
+//        mat3 XYZtoRGB = mat3(vec3( 0.032406f, -0.009689f,  0.000557f),
+//                            vec3(-0.015372f,  0.018758f, -0.002040f),
+//                            vec3(-0.004986f,  0.000415f,  0.010570f));
+//
+//        vec3 RGB = XYZtoRGB * XYZ;
+//
+//        if (RGB.x >= 0.0 && RGB.y >= 0.0 && RGB.z >= 0.0)
+//        {
+//            RGB /= max(RGB.x, max(RGB.y, RGB.z));
+//            vec3 sRGB = pow(RGB, vec3(1.0 / 2.4));
+//            color.xyz = sRGB;
+//        }
+    }
+
     class C03511 extends DefaultLabelFormatter {
         C03511() {
         }
@@ -561,5 +558,33 @@ public class SpectrumActivity extends AppCompatActivity implements View.OnTouchL
         }
         return values;
     }
+
+    private void drawChromacityDiagram(double x, double y){
+//        NumberFormat nf = NumberFormat.getInstance();
+//        nf.setMaximumFractionDigits(0);
+//        chromacityGraph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(nf, nf));
+//        chromacityGraph.getGridLabelRenderer().setLabelFormatter(new C03511());
+//        chromacityGraph.getGridLabelRenderer().setHorizontalAxisTitle("x");
+//        chromacityGraph.getGridLabelRenderer().setNumVerticalLabels(3);
+//        ChromaData chromaData = new ChromaData();
+
+        ArrayList<ChromaData> data = new HorseShoe().getSortedData();
+
+        DataPoint[] dataPoints =
+                new DataPoint[data.size()];
+
+        for (int i=0;i<data.size();i++){
+            ChromaData d = data.get(i);
+            dataPoints[i] = new DataPoint(d.x, d.y);
+        }
+//                            new LineGraphSeries(this.generateData());
+        chromacitySeries = new LineGraphSeries(dataPoints);
+        chromacitySeries.setThickness(2);
+        chromacitySeries.setColor(Color.rgb(155, 155, 155));
+        graph.removeAllSeries();
+        graph.addSeries(chromacitySeries);
+    }
+
+
 
 }

@@ -202,9 +202,17 @@
     </LinearLayout>
 
     <com.jjoe64.graphview.GraphView
+        android:id="@+id/chromacityGraph"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_above="@+id/graph"
+        android:background="@color/cardview_light_background"
+        android:padding="3dp"/>
+
+    <com.jjoe64.graphview.GraphView
         android:id="@+id/graph"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_above="@+id/histogram"
         android:background="@color/cardview_light_background"
         android:padding="3dp"/>
@@ -212,7 +220,7 @@
     <ImageView
         android:id="@+id/histogram"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_alignParentBottom="true"
         android:background="@android:color/black"
         android:padding="3dp"/>

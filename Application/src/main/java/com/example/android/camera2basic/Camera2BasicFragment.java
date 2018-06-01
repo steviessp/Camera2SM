@@ -17,7 +17,6 @@
 package com.example.android.camera2basic;
 
 import android.Manifest;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -60,7 +59,6 @@ import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -370,11 +368,7 @@ public class Camera2BasicFragment extends Fragment
     private ImageButton flashButton;
     private ProgressBar progressBar;
 
-    public enum FlashMode {
-        FLASH_AUTO,
-        FLASH_ON,
-        FLASH_OFF
-    }
+
 
     /**
      * A {@link CameraCaptureSession.CaptureCallback} that handles events related to JPEG capture.
@@ -531,7 +525,7 @@ public class Camera2BasicFragment extends Fragment
         flashButton = (ImageButton) view.findViewById(R.id.flashButton);
 
         mTextureView.setOnClickListener(this);
-        mFlashMode = FlashMode.FLASH_AUTO;
+        mFlashMode = Constants.FlashMode.FLASH_AUTO;
         flashButton.setImageResource(R.drawable.ic_flash_auto);
         flashButton.setOnClickListener(this);
 
@@ -1020,15 +1014,6 @@ public class Camera2BasicFragment extends Fragment
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.texture: {
-//                cameraBitmap = mTextureView.getBitmap();
-//                int cropX = (int) sightView.getX();  //dpToPx(5);
-//                int cropY = (int) sightView.getY(); // dpToPx(5);
-//                BMPSingleton.getInstance().setBitmap(cameraBitmap);
-//                BMPSingleton.getInstance().setCropX(cropX);
-//                BMPSingleton.getInstance().setCropY(cropY);
-//
-//                Intent spectrumIntent = new Intent(getActivity(), SpectrumActivity.class);
-//                getActivity().startActivity(spectrumIntent);
                 progressBar.setIndeterminate(true);
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
@@ -1037,12 +1022,9 @@ public class Camera2BasicFragment extends Fragment
                         progressBar.setVisibility(View.VISIBLE);
                     }
                 });
-
-
                 takePicture();
                 break;
             }
-
             case R.id.info: {
                 Activity activity = getActivity();
                 if (null != activity) {
@@ -1063,45 +1045,24 @@ public class Camera2BasicFragment extends Fragment
                 }
                 break;
             }
-
-//            case R.id.histogram: {
-////                drawHistogram(croppedBitmap);
-//
-//                break;
-//            }
-//            case R.id.histogram: {
-//                if (histogramView.getDrawable() == null)
-//                    break;
-//                if (histogramDrawn)
-//                    switchDiagrams();
-//                else
-//                    drawHistogram(croppedBitmap);
-//                break;
-//            }
-
-//            case R.id.graph: {
-//                switchDiagrams();
-//            }
-
-
         }
     }
 
-    public FlashMode mFlashMode;
+    public Constants.FlashMode mFlashMode;
 
     void toggleFlashMode() {
 
         switch (mFlashMode) {
             //AUTO->ON->OFF->AUTO
             case FLASH_AUTO:
-                mFlashMode = FlashMode.FLASH_ON;
+                mFlashMode = Constants.FlashMode.FLASH_ON;
                 break;
             case FLASH_ON:
-                mFlashMode = FlashMode.FLASH_OFF;
+                mFlashMode = Constants.FlashMode.FLASH_OFF;
                 ;
                 break;
             case FLASH_OFF:
-                mFlashMode = FlashMode.FLASH_AUTO;
+                mFlashMode = Constants.FlashMode.FLASH_AUTO;
                 break;
         }
         setFlashMode(mPreviewRequestBuilder);
@@ -1124,7 +1085,7 @@ public class Camera2BasicFragment extends Fragment
                         }//public void run() {
                     });
 
-                    mFlashMode = FlashMode.FLASH_AUTO;
+                    mFlashMode = Constants.FlashMode.FLASH_AUTO;
                     break;
                 case FLASH_ON:
                     requestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
@@ -1135,7 +1096,7 @@ public class Camera2BasicFragment extends Fragment
                             flashButton.setImageResource(R.drawable.ic_flash_on);
                         }//public void run() {
                     });
-                    mFlashMode = FlashMode.FLASH_ON;
+                    mFlashMode = Constants.FlashMode.FLASH_ON;
                     break;
                 case FLASH_OFF:
                     requestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
@@ -1146,7 +1107,7 @@ public class Camera2BasicFragment extends Fragment
                             flashButton.setImageResource(R.drawable.ic_flash_off);
                         }//public void run() {
                     });
-                    mFlashMode = FlashMode.FLASH_OFF;
+                    mFlashMode = Constants.FlashMode.FLASH_OFF;
                     break;
             }
         }
@@ -1274,28 +1235,6 @@ public class Camera2BasicFragment extends Fragment
                             })
                     .create();
         }
-    }
-
-    private Bitmap cameraBitmap;
-
-    void drawColorGamut() {
-//        vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
-//
-//        vec3 xyY = vec3(pass_Position.xy, 100.0);
-//        vec3 XYZ = xyY.z * vec3(xyY.x / xyY.y, 1.0, (1.0 - xyY.x - xyY.y) / xyY.y);
-//
-//        mat3 XYZtoRGB = mat3(vec3( 0.032406f, -0.009689f,  0.000557f),
-//                            vec3(-0.015372f,  0.018758f, -0.002040f),
-//                            vec3(-0.004986f,  0.000415f,  0.010570f));
-//
-//        vec3 RGB = XYZtoRGB * XYZ;
-//
-//        if (RGB.x >= 0.0 && RGB.y >= 0.0 && RGB.z >= 0.0)
-//        {
-//            RGB /= max(RGB.x, max(RGB.y, RGB.z));
-//            vec3 sRGB = pow(RGB, vec3(1.0 / 2.4));
-//            color.xyz = sRGB;
-//        }
     }
 
 }
